@@ -19,33 +19,33 @@ export const dictionaries = {
       heroEyebrow: "Family & Cosmetic Dentistry",
       heroTitle: "Bright smiles begin with gentle care.",
       heroSubtitle:
-        "At Allshine Dental Care, we combine modern technology with a warm, family-first approach so every visit leaves you confident in your smile.",
+        "At Allshine Dental Care, you're treated like family. From routine cleanings to advanced specialty care, you'll receive personalized, expert dentistry — all under one roof, in a calm and welcoming environment.",
       heroCtaPrimary: "Book an Appointment",
       heroCtaSecondary: "Explore Services",
       featuresEyebrow: "Why Allshine",
       featuresTitle: "Compassionate care, modern dentistry.",
       features: [
         {
-          title: "Caring team",
-          body: "A friendly, bilingual team that takes the time to listen and explain every step.",
+          title: "Treated like family",
+          body: "A warm, bilingual team that takes the time to listen, explain, and care for you like one of our own.",
         },
         {
-          title: "Modern technology",
-          body: "Digital imaging, gentle cleanings, and same-day comfort solutions.",
+          title: "Specialty care, one roof",
+          body: "From cleanings to implants and orthodontics — no referrals across town to see a specialist.",
         },
         {
-          title: "Family-friendly",
-          body: "From your child's first visit to your parent's implant — one trusted home for everyone.",
+          title: "Personalized plans",
+          body: "Care designed around your goals, your timeline, and your comfort — never one-size-fits-all.",
         },
         {
-          title: "Flexible scheduling",
-          body: "Evening and Saturday appointments available to fit your life.",
+          title: "Calm environment",
+          body: "A modern, peaceful office designed to make every visit feel easy — even relaxing.",
         },
       ],
       aboutEyebrow: "About Our Practice",
       aboutTitle: "Dentistry built around your comfort.",
       aboutBody:
-        "We believe great dentistry starts with great relationships. Our doctors take time to understand your goals — from a healthier smile to a complete cosmetic transformation — and craft a treatment plan that respects your time, your budget, and your comfort.",
+        "We believe great dentistry begins with trust. Our team treats every patient like family — with professionalism, honesty, and integrity — and provides specialized care all in one place, so you never need to look elsewhere for the smile you deserve.",
       aboutCta: "Learn more about us",
       servicesEyebrow: "Our Services",
       servicesTitle: "Everything your smile needs, under one roof.",
@@ -62,19 +62,31 @@ export const dictionaries = {
       eyebrow: "About Us",
       title: "A family practice with a passion for smiles.",
       intro:
-        "Allshine Dental Care was founded with a simple mission: to deliver world-class dentistry in a setting where every patient feels like family. We treat children, adults, and seniors with the same care we'd give our own loved ones.",
+        "Allshine Dental Care was founded on a simple belief: every patient deserves to be treated like family. We bring together a full range of specialized dental services — for children, adults, and seniors — in one calm, welcoming home, so you can get the care you need without ever being sent across town.",
       missionTitle: "Our Mission",
       missionBody:
-        "To make exceptional dental care approachable, gentle, and bilingual — so every patient leaves with confidence and a healthier smile.",
+        "Allshine Dental Care's mission is to be recognized as the dental clinic you can trust — known for our professionalism, honesty, and integrity — where you'll be treated as family. A practice where you receive specialized dental care without having to go elsewhere to see a specialist, and where we strive to provide excellent, personalized service in a calm environment.",
       visionTitle: "Our Vision",
       visionBody:
-        "To be the most trusted dental home in our community by combining clinical excellence with genuine warmth.",
+        "To be our community's most trusted dental home: a place where every patient feels welcomed, every smile is cared for personally, and every visit feels easy.",
       valuesTitle: "Our Values",
       values: [
-        { title: "Compassion", body: "We listen first, then treat." },
-        { title: "Excellence", body: "Modern techniques, careful hands." },
-        { title: "Integrity", body: "Honest recommendations, transparent pricing." },
-        { title: "Community", body: "Bilingual care for the families we serve." },
+        {
+          title: "Trust",
+          body: "Professionalism, honesty, and integrity in everything we do.",
+        },
+        {
+          title: "Family",
+          body: "Every patient is welcomed and treated like one of our own.",
+        },
+        {
+          title: "Specialty Care",
+          body: "Comprehensive treatment under one roof — no outside referrals.",
+        },
+        {
+          title: "Personalized",
+          body: "Care tailored to your goals, in a calm, comfortable setting.",
+        },
       ],
       teamTitle: "Meet the Team",
       teamSubtitle: "(Coming soon — replace with doctor and staff bios.)",
@@ -215,33 +227,33 @@ export const dictionaries = {
       heroEyebrow: "Odontología Familiar y Estética",
       heroTitle: "Sonrisas brillantes comienzan con cuidado gentil.",
       heroSubtitle:
-        "En Allshine Dental Care combinamos tecnología moderna con un enfoque cálido y familiar para que cada visita le deje con confianza en su sonrisa.",
+        "En Allshine Dental Care lo tratamos como parte de la familia. Desde limpiezas de rutina hasta atención especializada avanzada, recibirá odontología experta y personalizada — todo bajo un mismo techo, en un ambiente tranquilo y acogedor.",
       heroCtaPrimary: "Reservar Cita",
       heroCtaSecondary: "Ver Servicios",
       featuresEyebrow: "Por Qué Allshine",
       featuresTitle: "Atención compasiva, odontología moderna.",
       features: [
         {
-          title: "Equipo dedicado",
-          body: "Un equipo bilingüe que escucha y explica cada paso con paciencia.",
+          title: "Tratado como familia",
+          body: "Un equipo bilingüe y cálido que se toma el tiempo de escucharle, explicarle y cuidarle como a uno de los nuestros.",
         },
         {
-          title: "Tecnología moderna",
-          body: "Imágenes digitales, limpiezas suaves y soluciones cómodas el mismo día.",
+          title: "Especialidades en un solo lugar",
+          body: "Desde limpiezas hasta implantes y ortodoncia — sin tener que ir a otro consultorio para ver a un especialista.",
         },
         {
-          title: "Para toda la familia",
-          body: "Desde la primera visita de su hijo hasta los implantes de sus padres.",
+          title: "Planes personalizados",
+          body: "Atención diseñada según sus metas, su tiempo y su comodidad — nunca de talla única.",
         },
         {
-          title: "Horario flexible",
-          body: "Citas por la tarde y los sábados para adaptarnos a su rutina.",
+          title: "Ambiente tranquilo",
+          body: "Una clínica moderna y serena que hace que cada visita sea fácil — incluso relajante.",
         },
       ],
       aboutEyebrow: "Sobre la Clínica",
       aboutTitle: "Odontología pensada para su comodidad.",
       aboutBody:
-        "Creemos que la mejor odontología empieza con grandes relaciones. Nuestros doctores se toman el tiempo de entender sus metas y crear un plan que respete su tiempo, presupuesto y comodidad.",
+        "Creemos que la mejor odontología empieza con confianza. Nuestro equipo trata a cada paciente como familia — con profesionalismo, honestidad e integridad — y ofrece atención especializada en un solo lugar, para que nunca tenga que buscar en otro sitio la sonrisa que merece.",
       aboutCta: "Conózcanos",
       servicesEyebrow: "Nuestros Servicios",
       servicesTitle: "Todo lo que su sonrisa necesita, bajo un mismo techo.",
@@ -258,19 +270,31 @@ export const dictionaries = {
       eyebrow: "Sobre Nosotros",
       title: "Una clínica familiar apasionada por las sonrisas.",
       intro:
-        "Allshine Dental Care nació con una misión simple: ofrecer odontología de clase mundial en un ambiente donde cada paciente se sienta como en familia. Atendemos niños, adultos y adultos mayores con el mismo cuidado que daríamos a los nuestros.",
+        "Allshine Dental Care nació de una creencia simple: cada paciente merece ser tratado como familia. Reunimos una gama completa de servicios dentales especializados — para niños, adultos y adultos mayores — en un hogar tranquilo y acogedor, para que reciba toda la atención que necesita sin que lo manden a otro lado.",
       missionTitle: "Nuestra Misión",
       missionBody:
-        "Hacer accesible la atención dental excepcional, gentil y bilingüe — para que cada paciente salga con confianza y una sonrisa más saludable.",
+        "La misión de Allshine Dental Care es ser reconocidos como la clínica dental en la que usted puede confiar — por nuestra profesionalidad, honestidad e integridad — donde será tratado como parte de la familia. Una clínica donde recibirá atención dental especializada sin tener que ir a otro lugar para ver a un especialista, y donde nos esforzamos por brindar un servicio personalizado y excelente en un ambiente tranquilo.",
       visionTitle: "Nuestra Visión",
       visionBody:
-        "Ser el hogar dental más confiable de la comunidad combinando excelencia clínica con calidez genuina.",
+        "Ser el hogar dental más confiable de nuestra comunidad: un lugar donde cada paciente se sienta bienvenido, cada sonrisa reciba atención personal, y cada visita sea sencilla.",
       valuesTitle: "Nuestros Valores",
       values: [
-        { title: "Compasión", body: "Primero escuchamos, luego tratamos." },
-        { title: "Excelencia", body: "Técnicas modernas, manos cuidadosas." },
-        { title: "Integridad", body: "Recomendaciones honestas, precios transparentes." },
-        { title: "Comunidad", body: "Atención bilingüe para las familias que servimos." },
+        {
+          title: "Confianza",
+          body: "Profesionalidad, honestidad e integridad en todo lo que hacemos.",
+        },
+        {
+          title: "Familia",
+          body: "Cada paciente es bienvenido y tratado como uno de los nuestros.",
+        },
+        {
+          title: "Atención Especializada",
+          body: "Tratamiento integral bajo un mismo techo — sin referencias externas.",
+        },
+        {
+          title: "Personalizado",
+          body: "Atención hecha a su medida, en un ambiente tranquilo y cómodo.",
+        },
       ],
       teamTitle: "Conozca al Equipo",
       teamSubtitle: "(Próximamente — reemplazar con biografías del equipo.)",
