@@ -11,6 +11,9 @@ import { siteConfig } from "@/lib/site-config";
 export default function HomePage() {
   const { t } = useLanguage();
   const totalServices = String(t.services.list.length).padStart(2, "0");
+  const reviewHalf = Math.ceil(t.testimonials.list.length / 2);
+  const topReviews = t.testimonials.list.slice(0, reviewHalf);
+  const bottomReviews = t.testimonials.list.slice(reviewHalf);
   return (
     <>
       {/* HERO */}
@@ -172,9 +175,14 @@ export default function HomePage() {
           </Reveal>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 space-y-6">
           <Marquee direction="left" durationSeconds={90}>
-            {t.testimonials.list.map((r) => (
+            {topReviews.map((r) => (
+              <ReviewCard key={r.name + r.date} review={r} />
+            ))}
+          </Marquee>
+          <Marquee direction="right" durationSeconds={90}>
+            {bottomReviews.map((r) => (
               <ReviewCard key={r.name + r.date} review={r} />
             ))}
           </Marquee>
