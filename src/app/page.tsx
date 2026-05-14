@@ -2,26 +2,15 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
-import { ServiceIllustration, type ServiceKind } from "@/components/ServiceIllustration";
 import { Marquee } from "@/components/Marquee";
 import { ReviewCard } from "@/components/ReviewCard";
 import { GoogleLogo } from "@/components/GoogleLogo";
 import { Reveal } from "@/components/Reveal";
 import { siteConfig } from "@/lib/site-config";
 
-const SERVICE_KINDS: ServiceKind[] = [
-  "preventive",
-  "cosmetic",
-  "restorative",
-  "implants",
-  "ortho",
-  "pediatric",
-  "root-canal",
-  "emergency",
-];
-
 export default function HomePage() {
   const { t } = useLanguage();
+  const totalServices = String(t.services.list.length).padStart(2, "0");
   return (
     <>
       {/* HERO */}
@@ -127,22 +116,30 @@ export default function HomePage() {
               </Link>
             </div>
           </Reveal>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {t.services.list.slice(0, 6).map((s, i) => (
-              <Reveal key={s.title} as="fade-up" delay={i * 80}>
-                <article className="group h-full overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-brand-300 hover:shadow-2xl">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
-                      <ServiceIllustration kind={SERVICE_KINDS[i]} />
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {t.services.list.slice(0, 8).map((s, i) => {
+              const num = String(i + 1).padStart(2, "0");
+              return (
+                <Reveal key={s.title} as="fade-up" delay={(i % 4) * 80}>
+                  <article className="group h-full rounded-2xl border border-brand-200/60 bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brand-700 hover:shadow-lg">
+                    <div className="flex items-baseline justify-between">
+                      <span className="font-script text-5xl leading-none text-brand-700">
+                        {num}
+                      </span>
+                      <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-brand-700/60">
+                        {num} / {totalServices}
+                      </span>
                     </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-brand-900">{s.title}</h3>
-                    <p className="mt-2 text-sm text-slate-600">{s.body}</p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
+                    <h3 className="mt-6 text-base font-semibold text-brand-900">
+                      {s.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                      {s.body}
+                    </p>
+                  </article>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -19,7 +19,7 @@ export const dictionaries = {
       heroEyebrow: "Family & Cosmetic Dentistry",
       heroTitle: "Bright smiles begin with gentle care.",
       heroSubtitle:
-        "At Allshine Dental Care, you're treated like family. From routine cleanings to advanced specialty care, you'll receive personalized, expert dentistry — all under one roof, in a calm and welcoming environment.",
+        "At Allshine Dental Care, you're treated like family. From routine cleanings to advanced specialty care, you'll receive personalized, expert dentistry, all under one roof, in a calm and welcoming environment.",
       heroCtaPrimary: "Book an Appointment",
       heroCtaSecondary: "Explore Services",
       featuresEyebrow: "Why Allshine",
@@ -31,21 +31,21 @@ export const dictionaries = {
         },
         {
           title: "Specialty care, one roof",
-          body: "From cleanings to implants and orthodontics — no referrals across town to see a specialist.",
+          body: "From cleanings to implants and orthodontics, with no referrals across town to see a specialist.",
         },
         {
           title: "Personalized plans",
-          body: "Care designed around your goals, your timeline, and your comfort — never one-size-fits-all.",
+          body: "Care designed around your goals, your timeline, and your comfort, never one-size-fits-all.",
         },
         {
           title: "Calm environment",
-          body: "A modern, peaceful office designed to make every visit feel easy — even relaxing.",
+          body: "A modern, peaceful office designed to make every visit feel easy, even relaxing.",
         },
       ],
       aboutEyebrow: "About Our Practice",
       aboutTitle: "Dentistry built around your comfort.",
       aboutBody:
-        "We believe great dentistry begins with trust. Our team treats every patient like family — with professionalism, honesty, and integrity — and provides specialized care all in one place, so you never need to look elsewhere for the smile you deserve.",
+        "We believe great dentistry begins with trust. Our team treats every patient like family, with professionalism, honesty, and integrity, and provides specialized care all in one place, so you never need to look elsewhere for the smile you deserve.",
       aboutCta: "Learn more about us",
       servicesEyebrow: "Our Services",
       servicesTitle: "Everything your smile needs, under one roof.",
@@ -62,10 +62,10 @@ export const dictionaries = {
       eyebrow: "About Us",
       title: "A family practice with a passion for smiles.",
       intro:
-        "Allshine Dental Care was founded on a simple belief: every patient deserves to be treated like family. We bring together a full range of specialized dental services — for children, adults, and seniors — in one calm, welcoming home, so you can get the care you need without ever being sent across town.",
+        "Allshine Dental Care was founded on a simple belief: every patient deserves to be treated like family. We bring together a full range of specialized dental services for children, adults, and seniors, all in one calm, welcoming home, so you can get the care you need without ever being sent across town.",
       missionTitle: "Our Mission",
       missionBody:
-        "Allshine Dental Care's mission is to be recognized as the dental clinic you can trust — known for our professionalism, honesty, and integrity — where you'll be treated as family. A practice where you receive specialized dental care without having to go elsewhere to see a specialist, and where we strive to provide excellent, personalized service in a calm environment.",
+        "Allshine Dental Care's mission is to be recognized as the dental clinic you can trust, known for our professionalism, honesty, and integrity, where you'll be treated as family. A practice where you receive specialized dental care without having to go elsewhere to see a specialist, and where we strive to provide excellent, personalized service in a calm environment.",
       visionTitle: "Our Vision",
       visionBody:
         "To be our community's most trusted dental home: a place where every patient feels welcomed, every smile is cared for personally, and every visit feels easy.",
@@ -81,7 +81,7 @@ export const dictionaries = {
         },
         {
           title: "Specialty Care",
-          body: "Comprehensive treatment under one roof — no outside referrals.",
+          body: "Comprehensive treatment under one roof, with no outside referrals.",
         },
         {
           title: "Personalized",
@@ -89,7 +89,7 @@ export const dictionaries = {
         },
       ],
       teamTitle: "Meet the Team",
-      teamSubtitle: "(Coming soon — replace with doctor and staff bios.)",
+      teamSubtitle: "(Coming soon. Replace with doctor and staff bios.)",
     },
     services: {
       eyebrow: "Our Services",
@@ -149,7 +149,7 @@ export const dictionaries = {
       formRating: "Rating",
       formMessage: "Tell us about your experience",
       formSubmit: "Submit Review",
-      formThankYou: "Thank you — your review has been submitted!",
+      formThankYou: "Thank you! Your review has been submitted.",
       relationshipOptions: ["Patient", "New patient", "Parent", "Long-time patient"],
       list: [
         {
@@ -230,7 +230,7 @@ export const dictionaries = {
           location: "Miami Lakes, FL",
           date: "2025-09",
           quote:
-            "My veneers look exactly like I imagined — natural, bright, and shaped to my face. Worth every penny.",
+            "My veneers look exactly as I imagined: natural, bright, and shaped to my face. Worth every penny.",
         },
         {
           name: "Patricia W.",
@@ -262,7 +262,7 @@ export const dictionaries = {
           location: "Cutler Bay, FL",
           date: "2025-11",
           quote:
-            "Chipped a tooth on a Saturday — they fit me in same-day. Professional, quick, and the repair is perfect.",
+            "Chipped a tooth on a Saturday and they fit me in same-day. Professional, quick, and the repair is perfect.",
         },
       ],
     },
@@ -270,7 +270,7 @@ export const dictionaries = {
       eyebrow: "Contact",
       title: "We'd love to meet your smile.",
       intro:
-        "Call us, send a message, or stop by — we're happy to answer any questions and help you book your first visit.",
+        "Call us, send a message, or stop by. We're happy to answer any questions and help you book your first visit.",
       formTitle: "Send us a message",
       formName: "Full name",
       formEmail: "Email",
@@ -318,7 +318,7 @@ export const dictionaries = {
       heroEyebrow: "Odontología Familiar y Estética",
       heroTitle: "Sonrisas brillantes comienzan con cuidado gentil.",
       heroSubtitle:
-        "En Allshine Dental Care lo tratamos como parte de la familia. Desde limpiezas de rutina hasta atención especializada avanzada, recibirá odontología experta y personalizada — todo bajo un mismo techo, en un ambiente tranquilo y acogedor.",
+        "En Allshine Dental Care lo tratamos como parte de la familia. Desde limpiezas de rutina hasta atención especializada avanzada, recibirá odontología experta y personalizada, todo bajo un mismo techo, en un ambiente tranquilo y acogedor.",
       heroCtaPrimary: "Reservar Cita",
       heroCtaSecondary: "Ver Servicios",
       featuresEyebrow: "Por Qué Allshine",
@@ -330,21 +330,21 @@ export const dictionaries = {
         },
         {
           title: "Especialidades en un solo lugar",
-          body: "Desde limpiezas hasta implantes y ortodoncia — sin tener que ir a otro consultorio para ver a un especialista.",
+          body: "Desde limpiezas hasta implantes y ortodoncia, sin tener que ir a otro consultorio para ver a un especialista.",
         },
         {
           title: "Planes personalizados",
-          body: "Atención diseñada según sus metas, su tiempo y su comodidad — nunca de talla única.",
+          body: "Atención diseñada según sus metas, su tiempo y su comodidad, nunca de talla única.",
         },
         {
           title: "Ambiente tranquilo",
-          body: "Una clínica moderna y serena que hace que cada visita sea fácil — incluso relajante.",
+          body: "Una clínica moderna y serena que hace que cada visita sea fácil, incluso relajante.",
         },
       ],
       aboutEyebrow: "Sobre la Clínica",
       aboutTitle: "Odontología pensada para su comodidad.",
       aboutBody:
-        "Creemos que la mejor odontología empieza con confianza. Nuestro equipo trata a cada paciente como familia — con profesionalismo, honestidad e integridad — y ofrece atención especializada en un solo lugar, para que nunca tenga que buscar en otro sitio la sonrisa que merece.",
+        "Creemos que la mejor odontología empieza con confianza. Nuestro equipo trata a cada paciente como familia, con profesionalismo, honestidad e integridad, y ofrece atención especializada en un solo lugar, para que nunca tenga que buscar en otro sitio la sonrisa que merece.",
       aboutCta: "Conózcanos",
       servicesEyebrow: "Nuestros Servicios",
       servicesTitle: "Todo lo que su sonrisa necesita, bajo un mismo techo.",
@@ -361,10 +361,10 @@ export const dictionaries = {
       eyebrow: "Sobre Nosotros",
       title: "Una clínica familiar apasionada por las sonrisas.",
       intro:
-        "Allshine Dental Care nació de una creencia simple: cada paciente merece ser tratado como familia. Reunimos una gama completa de servicios dentales especializados — para niños, adultos y adultos mayores — en un hogar tranquilo y acogedor, para que reciba toda la atención que necesita sin que lo manden a otro lado.",
+        "Allshine Dental Care nació de una creencia simple: cada paciente merece ser tratado como familia. Reunimos una gama completa de servicios dentales especializados para niños, adultos y adultos mayores, todo en un hogar tranquilo y acogedor, para que reciba toda la atención que necesita sin que lo manden a otro lado.",
       missionTitle: "Nuestra Misión",
       missionBody:
-        "La misión de Allshine Dental Care es ser reconocidos como la clínica dental en la que usted puede confiar — por nuestra profesionalidad, honestidad e integridad — donde será tratado como parte de la familia. Una clínica donde recibirá atención dental especializada sin tener que ir a otro lugar para ver a un especialista, y donde nos esforzamos por brindar un servicio personalizado y excelente en un ambiente tranquilo.",
+        "La misión de Allshine Dental Care es ser reconocidos como la clínica dental en la que usted puede confiar, por nuestra profesionalidad, honestidad e integridad, donde será tratado como parte de la familia. Una clínica donde recibirá atención dental especializada sin tener que ir a otro lugar para ver a un especialista, y donde nos esforzamos por brindar un servicio personalizado y excelente en un ambiente tranquilo.",
       visionTitle: "Nuestra Visión",
       visionBody:
         "Ser el hogar dental más confiable de nuestra comunidad: un lugar donde cada paciente se sienta bienvenido, cada sonrisa reciba atención personal, y cada visita sea sencilla.",
@@ -380,7 +380,7 @@ export const dictionaries = {
         },
         {
           title: "Atención Especializada",
-          body: "Tratamiento integral bajo un mismo techo — sin referencias externas.",
+          body: "Tratamiento integral bajo un mismo techo, sin referencias externas.",
         },
         {
           title: "Personalizado",
@@ -388,7 +388,7 @@ export const dictionaries = {
         },
       ],
       teamTitle: "Conozca al Equipo",
-      teamSubtitle: "(Próximamente — reemplazar con biografías del equipo.)",
+      teamSubtitle: "(Próximamente. Reemplazar con biografías del equipo.)",
     },
     services: {
       eyebrow: "Nuestros Servicios",
@@ -448,7 +448,7 @@ export const dictionaries = {
       formRating: "Calificación",
       formMessage: "Cuéntenos sobre su experiencia",
       formSubmit: "Enviar Reseña",
-      formThankYou: "Gracias — ¡su reseña ha sido enviada!",
+      formThankYou: "¡Gracias! Su reseña ha sido enviada.",
       relationshipOptions: ["Paciente", "Paciente nuevo", "Padre/Madre", "Paciente de años"],
       list: [
         {
@@ -529,7 +529,7 @@ export const dictionaries = {
           location: "Miami Lakes, FL",
           date: "2025-09",
           quote:
-            "Mis carillas se ven justo como las imaginaba — naturales, brillantes, hechas a mi cara. Vale cada centavo.",
+            "Mis carillas se ven justo como las imaginaba: naturales, brillantes, hechas a mi cara. Vale cada centavo.",
         },
         {
           name: "Patricia W.",
@@ -561,7 +561,7 @@ export const dictionaries = {
           location: "Cutler Bay, FL",
           date: "2025-11",
           quote:
-            "Me partí un diente un sábado — me atendieron el mismo día. Profesional, rápido y la reparación perfecta.",
+            "Me partí un diente un sábado y me atendieron el mismo día. Profesional, rápido y la reparación perfecta.",
         },
       ],
     },
@@ -569,7 +569,7 @@ export const dictionaries = {
       eyebrow: "Contacto",
       title: "Nos encantaría conocer su sonrisa.",
       intro:
-        "Llámenos, envíenos un mensaje o visítenos — responderemos sus preguntas y le ayudaremos a reservar su primera visita.",
+        "Llámenos, envíenos un mensaje o visítenos. Responderemos sus preguntas y le ayudaremos a reservar su primera visita.",
       formTitle: "Envíenos un mensaje",
       formName: "Nombre completo",
       formEmail: "Correo electrónico",

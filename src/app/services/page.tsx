@@ -2,22 +2,12 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
-import { ServiceIllustration, type ServiceKind } from "@/components/ServiceIllustration";
 import { Reveal } from "@/components/Reveal";
-
-const SERVICE_KINDS: ServiceKind[] = [
-  "preventive",
-  "cosmetic",
-  "restorative",
-  "implants",
-  "ortho",
-  "pediatric",
-  "root-canal",
-  "emergency",
-];
 
 export default function ServicesPage() {
   const { t } = useLanguage();
+  const total = String(t.services.list.length).padStart(2, "0");
+
   return (
     <>
       <section className="bg-brand-950 py-20 text-white">
@@ -36,22 +26,30 @@ export default function ServicesPage() {
 
       <section className="bg-cream-100 py-20">
         <div className="section">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {t.services.list.map((s, i) => (
-              <Reveal key={s.title} as="fade-up" delay={(i % 3) * 100}>
-                <article className="group h-full overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-brand-300 hover:shadow-2xl">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
-                      <ServiceIllustration kind={SERVICE_KINDS[i]} />
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {t.services.list.map((s, i) => {
+              const num = String(i + 1).padStart(2, "0");
+              return (
+                <Reveal key={s.title} as="fade-up" delay={(i % 4) * 80}>
+                  <article className="group h-full rounded-2xl border border-brand-200/60 bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brand-700 hover:shadow-lg">
+                    <div className="flex items-baseline justify-between">
+                      <span className="font-script text-5xl leading-none text-brand-700">
+                        {num}
+                      </span>
+                      <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-brand-700/60">
+                        {num} / {total}
+                      </span>
                     </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-brand-900">{s.title}</h3>
-                    <p className="mt-2 text-sm text-slate-600">{s.body}</p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
+                    <h3 className="mt-6 text-base font-semibold text-brand-900">
+                      {s.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                      {s.body}
+                    </p>
+                  </article>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -64,7 +62,7 @@ export default function ServicesPage() {
                 Not sure what you need?
               </h2>
               <p className="mx-auto mt-3 max-w-xl text-brand-100">
-                Book a consultation — we&apos;ll help you find the right plan for your smile.
+                Book a consultation and we&apos;ll help you find the right plan for your smile.
               </p>
               <Link href="/contact" className="btn-cream mt-8">
                 Book an Appointment

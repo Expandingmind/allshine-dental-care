@@ -55,7 +55,7 @@ export default function ContactPage() {
               </button>
               {submitted && (
                 <p className="text-sm text-brand-700">
-                  ✓ {t.contact.formSubmit} — {t.contact.formNote}
+                  ✓ {t.contact.formSubmit}. {t.contact.formNote}
                 </p>
               )}
               <p className="text-xs text-slate-400">{t.contact.formNote}</p>
