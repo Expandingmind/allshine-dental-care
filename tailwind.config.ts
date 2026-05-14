@@ -26,11 +26,11 @@ const config: Config = {
           500: "#56b87f",
           600: "#2e9d5a",
         },
-        // Cream — straight from the logo's card background
+        // Cream — exact match for the logo's card background (#faf3e6)
         cream: {
-          50: "#fdfaf0",
-          100: "#f7f0db",
-          200: "#eadcb3",
+          50: "#fdfaf3",
+          100: "#faf3e6",
+          200: "#f0e3c2",
         },
       },
       fontFamily: {
