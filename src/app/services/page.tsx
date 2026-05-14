@@ -2,6 +2,18 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
+import { ServiceIllustration, type ServiceKind } from "@/components/ServiceIllustration";
+
+const SERVICE_KINDS: ServiceKind[] = [
+  "preventive",
+  "cosmetic",
+  "restorative",
+  "implants",
+  "ortho",
+  "pediatric",
+  "root-canal",
+  "emergency",
+];
 
 export default function ServicesPage() {
   const { t } = useLanguage();
@@ -22,16 +34,18 @@ export default function ServicesPage() {
       <section className="bg-white py-16">
         <div className="section">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {t.services.list.map((s) => (
+            {t.services.list.map((s, i) => (
               <article
                 key={s.title}
-                className="group rounded-2xl border border-slate-100 bg-white p-6 transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-md"
+                className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-lg"
               >
-                <div className="grid h-12 w-12 place-items-center rounded-xl bg-brand-100 text-brand-700 transition group-hover:bg-brand-600 group-hover:text-white">
-                  <ToothIcon className="h-6 w-6" />
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <ServiceIllustration kind={SERVICE_KINDS[i]} />
                 </div>
-                <h3 className="mt-4 text-lg font-semibold text-slate-900">{s.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{s.body}</p>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-slate-900">{s.title}</h3>
+                  <p className="mt-2 text-sm text-slate-600">{s.body}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -50,13 +64,5 @@ export default function ServicesPage() {
         </div>
       </section>
     </>
-  );
-}
-
-function ToothIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M12 2.6c2.7 0 4 1.5 5.7 1.5 1.6 0 2.9 1.1 2.9 3.4 0 2.6-1 4.6-1.5 6.7-.6 2.4-1.3 7.2-3.7 7.2-1.7 0-1.9-2.5-3.4-2.5s-1.7 2.5-3.4 2.5c-2.4 0-3.1-4.8-3.7-7.2C4.4 12 3.4 10 3.4 7.5c0-2.3 1.3-3.4 2.9-3.4C8 4.1 9.3 2.6 12 2.6Z" />
-    </svg>
   );
 }
