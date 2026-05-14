@@ -27,12 +27,12 @@ export function Logo({ size = 44, variant = "dark", className = "" }: Props) {
         <path
           d="M 30 8 c 9 0 13 5 13 12 c 0 6 -2 14 -3 20 c -2 6 -3 16 -8 16 c -3 0 -3 -8 -6 -8 s -3 8 -6 8 c -5 0 -6 -10 -8 -16 c -1 -6 -3 -14 -3 -20 c 0 -7 4 -12 13 -12 z M 22 16 q 8 -4 16 0"
           fill="none"
-          stroke="#b08330"
+          stroke="#b8801a"
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        <g transform="translate(48 12)" fill="#b08330">
+        <g transform="translate(48 12)" fill="#b8801a">
           <path d="M 0 -5 L 1.3 -1.3 L 5 0 L 1.3 1.3 L 0 5 L -1.3 1.3 L -5 0 L -1.3 -1.3 Z" />
         </g>
       </svg>

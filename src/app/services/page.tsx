@@ -52,15 +52,22 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-brand-50/60 py-16">
-        <div className="section text-center">
-          <h2 className="h-display">Not sure what you need?</h2>
-          <p className="mt-3 text-slate-600">
-            Book a consultation — we&apos;ll help you find the right plan for your smile.
-          </p>
-          <Link href="/contact" className="btn-primary mt-6">
-            Book an Appointment
-          </Link>
+      <section className="bg-white py-20">
+        <div className="section">
+          <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 to-brand-900 px-8 py-12 text-center text-white shadow-xl sm:px-16 sm:py-16">
+            <h2 className="font-display text-3xl font-bold sm:text-4xl">
+              Not sure what you need?
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-brand-100">
+              Book a consultation — we&apos;ll help you find the right plan for your smile.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-accent-500 px-7 py-3 text-sm font-semibold text-brand-950 shadow-sm transition hover:bg-accent-400"
+            >
+              Book an Appointment
+            </Link>
+          </div>
         </div>
       </section>
     </>

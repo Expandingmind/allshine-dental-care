@@ -31,14 +31,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-brand-50/60 py-16">
+      <section className="bg-brand-950 py-16 text-white">
         <div className="section">
-          <h2 className="h-display text-center">{t.about.valuesTitle}</h2>
+          <h2 className="text-center font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+            {t.about.valuesTitle}
+          </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {t.about.values.map((v) => (
-              <div key={v.title} className="rounded-2xl bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-brand-700">{v.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{v.body}</p>
+              <div
+                key={v.title}
+                className="rounded-2xl bg-white/[0.04] p-6 ring-1 ring-white/10 transition hover:bg-white/[0.06]"
+              >
+                <h3 className="text-lg font-semibold text-accent-400">{v.title}</h3>
+                <p className="mt-2 text-sm text-brand-100">{v.body}</p>
               </div>
             ))}
           </div>

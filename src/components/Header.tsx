@@ -22,7 +22,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       {/* Top utility bar — BioHax-style: address, phone, appointment CTA, language */}
-      <div className="bg-brand-800 text-white">
+      <div className="bg-brand-950 text-white">
         <div className="section flex flex-wrap items-center justify-between gap-y-2 py-2 text-xs sm:text-sm">
           <div className="hidden items-center gap-6 md:flex">
             <span className="inline-flex items-center gap-2">

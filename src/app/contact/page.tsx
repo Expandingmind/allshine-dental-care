@@ -60,34 +60,34 @@ export default function ContactPage() {
           </div>
 
           {/* Info */}
-          <aside className="rounded-3xl bg-brand-50/60 p-8 lg:col-span-2">
-            <h2 className="font-display text-2xl font-bold text-slate-900">
+          <aside className="rounded-3xl bg-brand-950 p-8 text-white lg:col-span-2">
+            <h2 className="font-display text-2xl font-bold text-white">
               {t.contact.infoTitle}
             </h2>
             <dl className="mt-6 space-y-5 text-sm">
               <InfoRow label={t.contact.addressLabel}>{formatAddress()}</InfoRow>
               <InfoRow label={t.contact.phoneLabel}>
-                <a href={siteConfig.phoneHref} className="text-brand-700 hover:underline">
+                <a href={siteConfig.phoneHref} className="text-accent-400 hover:underline">
                   {siteConfig.phoneDisplay}
                 </a>
               </InfoRow>
               <InfoRow label={t.contact.emailLabel}>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="text-brand-700 hover:underline"
+                  className="text-accent-400 hover:underline"
                 >
                   {siteConfig.email}
                 </a>
               </InfoRow>
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                <dt className="text-xs font-semibold uppercase tracking-wider text-brand-300">
                   {t.contact.hoursLabel}
                 </dt>
-                <dd className="mt-2 space-y-1 text-slate-700">
+                <dd className="mt-2 space-y-1 text-brand-100">
                   {t.contact.hoursList.map((h) => (
                     <div key={h.day} className="flex justify-between gap-4">
                       <span>{h.day}</span>
-                      <span className="text-slate-500">{h.hours}</span>
+                      <span className="text-brand-300">{h.hours}</span>
                     </div>
                   ))}
                 </dd>
@@ -139,10 +139,10 @@ function InfoRow({
 }) {
   return (
     <div>
-      <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+      <dt className="text-xs font-semibold uppercase tracking-wider text-brand-300">
         {label}
       </dt>
-      <dd className="mt-1 text-slate-700">{children}</dd>
+      <dd className="mt-1 text-brand-100">{children}</dd>
     </div>
   );
 }
