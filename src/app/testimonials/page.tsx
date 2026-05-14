@@ -1,18 +1,11 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { siteConfig } from "@/lib/site-config";
 import { Marquee } from "@/components/Marquee";
 import { GoogleLogo } from "@/components/GoogleLogo";
-
-type Review = {
-  name: string;
-  role: string;
-  location: string;
-  date: string;
-  quote: string;
-};
+import { ReviewCard } from "@/components/ReviewCard";
 
 export default function TestimonialsPage() {
   const { t, locale } = useLanguage();
@@ -72,12 +65,12 @@ export default function TestimonialsPage() {
         <div className="space-y-6">
           <Marquee direction="left" durationSeconds={90}>
             {topRow.map((r) => (
-              <ReviewCard key={r.name + r.date} review={r} locale={locale} />
+              <ReviewCard key={r.name + r.date} review={r} />
             ))}
           </Marquee>
           <Marquee direction="right" durationSeconds={90}>
             {bottomRow.map((r) => (
-              <ReviewCard key={r.name + r.date} review={r} locale={locale} />
+              <ReviewCard key={r.name + r.date} review={r} />
             ))}
           </Marquee>
         </div>
@@ -93,41 +86,6 @@ export default function TestimonialsPage() {
       {/* SHARE YOUR EXPERIENCE */}
       <LeaveReviewSection />
     </>
-  );
-}
-
-function ReviewCard({ review, locale }: { review: Review; locale: string }) {
-  const initial = review.name.charAt(0).toUpperCase();
-  const formattedDate = useMemo(() => formatReviewDate(review.date, locale), [review.date, locale]);
-  return (
-    <article className="flex h-full w-[320px] flex-col rounded-2xl bg-white/[0.04] p-6 ring-1 ring-white/10 sm:w-[360px]">
-      <div className="flex items-start justify-between">
-        <GoogleLogo className="h-7 w-7" />
-        <span
-          className="grid h-7 w-7 place-items-center rounded-full bg-white/10 text-xs font-semibold text-brand-100"
-          aria-hidden
-        >
-          {initial}
-        </span>
-      </div>
-      <div className="mt-4 flex gap-0.5 text-accent-400">
-        {[0, 1, 2, 3, 4].map((i) => (
-          <StarIcon key={i} className="h-4 w-4" />
-        ))}
-      </div>
-      <div className="mt-3">
-        <p className="text-base font-semibold text-white">{review.name}</p>
-        <p className="text-[11px] font-semibold uppercase tracking-wider text-emerald-400">
-          {review.role}
-        </p>
-      </div>
-      <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-brand-100">
-        &ldquo;{review.quote}&rdquo;
-      </blockquote>
-      <p className="mt-6 text-[11px] font-semibold uppercase tracking-wider text-brand-300">
-        {formattedDate}
-      </p>
-    </article>
   );
 }
 
@@ -279,13 +237,6 @@ function StarPicker({
       ))}
     </div>
   );
-}
-
-function formatReviewDate(iso: string, locale: string) {
-  const [y, m] = iso.split("-").map(Number);
-  if (!y || !m) return iso;
-  const d = new Date(y, m - 1, 1);
-  return d.toLocaleDateString(locale, { month: "short", year: "numeric" }).toUpperCase();
 }
 
 function StarIcon(props: React.SVGProps<SVGSVGElement>) {

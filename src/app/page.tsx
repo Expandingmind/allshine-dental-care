@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { ServiceIllustration, type ServiceKind } from "@/components/ServiceIllustration";
+import { Marquee } from "@/components/Marquee";
+import { ReviewCard } from "@/components/ReviewCard";
+import { GoogleLogo } from "@/components/GoogleLogo";
+import { siteConfig } from "@/lib/site-config";
 
 const SERVICE_KINDS: ServiceKind[] = [
   "preventive",
@@ -144,38 +148,41 @@ export default function HomePage() {
             <h2 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               {t.home.testimonialsTitle}
             </h2>
+            <div className="mt-4 inline-flex items-center gap-2 text-sm text-brand-100">
+              <span className="inline-flex gap-0.5 text-accent-400">
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <StarIcon key={i} className="h-4 w-4" />
+                ))}
+              </span>
+              <span>
+                <strong className="text-white">
+                  {siteConfig.reviewStats.average.toFixed(1)}
+                </strong>{" "}
+                · {siteConfig.reviewStats.count}+ {t.testimonials.statsReviewsLabel}
+              </span>
+            </div>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {t.testimonials.list.slice(0, 3).map((q) => (
-              <figure
-                key={q.name}
-                className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10"
-              >
-                <div className="flex gap-0.5 text-accent-400">
-                  {[0, 1, 2, 3, 4].map((i) => (
-                    <StarIcon key={i} className="h-4 w-4" />
-                  ))}
-                </div>
-                <blockquote className="mt-4 text-sm text-brand-100">
-                  &ldquo;{q.quote}&rdquo;
-                </blockquote>
-                <figcaption className="mt-5 text-sm font-semibold text-white">
-                  {q.name}
-                  <span className="ml-2 font-normal text-brand-300">
-                    · {q.location}
-                  </span>
-                </figcaption>
-              </figure>
+        </div>
+
+        <div className="mt-10">
+          <Marquee direction="left" durationSeconds={90}>
+            {t.testimonials.list.map((r) => (
+              <ReviewCard key={r.name + r.date} review={r} />
             ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/testimonials"
-              className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              {t.home.testimonialsCta}
-            </Link>
-          </div>
+          </Marquee>
+        </div>
+
+        <div className="section mt-10 flex flex-wrap items-center justify-center gap-4">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-xs font-medium text-brand-200 ring-1 ring-white/10">
+            <GoogleLogo className="h-4 w-4" />
+            {t.testimonials.verifiedLabel}
+          </span>
+          <Link
+            href="/testimonials"
+            className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+          >
+            {t.home.testimonialsCta}
+          </Link>
         </div>
       </section>
 
