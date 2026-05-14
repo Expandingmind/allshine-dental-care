@@ -11,6 +11,11 @@ export const siteConfig = {
   phoneHref: "tel:+13055550123",
   email: "hello@allshinedental.com",
   bookingUrl: "/contact",
+  googleReviewUrl: "https://g.page/r/PLACEHOLDER/review",
+  reviewStats: {
+    count: 112,
+    average: 4.9,
+  },
   social: {
     instagram: "https://instagram.com/",
     facebook: "https://facebook.com/",

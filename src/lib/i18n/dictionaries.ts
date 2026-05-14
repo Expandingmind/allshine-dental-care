@@ -133,45 +133,136 @@ export const dictionaries = {
     },
     testimonials: {
       eyebrow: "Testimonials",
-      title: "Smiles speak louder than words.",
+      title: "Why patients love Allshine.",
       intro:
         "Hear from the patients who trust Allshine Dental Care with their families' smiles.",
+      statsReviewsLabel: "reviews",
+      statsWithLabel: "with an overall",
+      statsRatingLabel: "star rating",
+      leaveReviewCta: "Leave a Review",
+      verifiedLabel: "Google Verified Reviews",
+      shareTitle: "Share your experience",
+      shareIntro:
+        "Loved your visit? Help future patients find us by leaving a quick review. You can post publicly on Google or send us your feedback directly here.",
+      formName: "Your name",
+      formRelationship: "I am a…",
+      formRating: "Rating",
+      formMessage: "Tell us about your experience",
+      formSubmit: "Submit Review",
+      formThankYou: "Thank you — your review has been submitted!",
+      relationshipOptions: ["Patient", "New patient", "Parent", "Long-time patient"],
       list: [
         {
           name: "Maria G.",
+          role: "FAMILY PATIENT",
           location: "Miami, FL",
+          date: "2026-03",
           quote:
             "The most welcoming dental office I've ever been to. The whole team is bilingual and so patient with my kids.",
         },
         {
           name: "James R.",
+          role: "COSMETIC PATIENT",
           location: "Coral Gables, FL",
+          date: "2026-02",
           quote:
-            "I came in for whitening and left with a complete smile makeover. Couldn't be happier with the results.",
+            "Came in for whitening and left with a complete smile makeover. Couldn't be happier with the results.",
         },
         {
           name: "Lucia M.",
+          role: "NEW PATIENT",
           location: "Doral, FL",
+          date: "2026-04",
           quote:
             "From the front desk to the doctor, everyone made me feel comfortable. I finally found my dental home.",
         },
         {
           name: "David S.",
+          role: "PATIENT",
           location: "Hialeah, FL",
+          date: "2026-01",
           quote:
             "Honest, gentle, and modern. They walked me through every step and the price was exactly what I was quoted.",
         },
         {
           name: "Andrea P.",
+          role: "INVISALIGN PATIENT",
           location: "Kendall, FL",
+          date: "2025-12",
           quote:
             "Best Invisalign experience. My smile changed and so did my confidence. Highly recommend.",
         },
         {
           name: "Carlos T.",
+          role: "PATIENT",
           location: "Miami Beach, FL",
+          date: "2025-11",
           quote:
-            "After years of avoiding the dentist, this team finally made me feel safe. I'm a patient for life.",
+            "After years avoiding the dentist, this team finally made me feel safe. I'm a patient for life.",
+        },
+        {
+          name: "Rosa V.",
+          role: "LONG-TIME PATIENT",
+          location: "Miami, FL",
+          date: "2026-04",
+          quote:
+            "We've been coming here for years. The care is consistent, the team feels like family, and they truly listen.",
+        },
+        {
+          name: "Michael B.",
+          role: "IMPLANT PATIENT",
+          location: "Aventura, FL",
+          date: "2025-10",
+          quote:
+            "My implants look completely natural. The whole process was painless and the aftercare was incredible.",
+        },
+        {
+          name: "Sofia L.",
+          role: "PARENT",
+          location: "Brickell, FL",
+          date: "2026-03",
+          quote:
+            "My kids actually look forward to their dentist visits. That alone tells you everything about this place.",
+        },
+        {
+          name: "Eduardo M.",
+          role: "VENEERS PATIENT",
+          location: "Miami Lakes, FL",
+          date: "2025-09",
+          quote:
+            "My veneers look exactly like I imagined — natural, bright, and shaped to my face. Worth every penny.",
+        },
+        {
+          name: "Patricia W.",
+          role: "FAMILY PATIENT",
+          location: "Westchester, FL",
+          date: "2026-02",
+          quote:
+            "Our whole family comes here, ages 7 to 72. Bilingual, gentle, and they never push unnecessary work.",
+        },
+        {
+          name: "Roberto A.",
+          role: "PATIENT",
+          location: "Pinecrest, FL",
+          date: "2026-01",
+          quote:
+            "Best cleaning I've ever had. Gentle, thorough, and the office feels more like a spa than a dental clinic.",
+        },
+        {
+          name: "Camila F.",
+          role: "COSMETIC PATIENT",
+          location: "Coconut Grove, FL",
+          date: "2025-12",
+          quote:
+            "The whitening made a huge difference and the team explained exactly what to expect. So happy I came in.",
+        },
+        {
+          name: "Jorge H.",
+          role: "EMERGENCY PATIENT",
+          location: "Cutler Bay, FL",
+          date: "2025-11",
+          quote:
+            "Chipped a tooth on a Saturday — they fit me in same-day. Professional, quick, and the repair is perfect.",
         },
       ],
     },
@@ -341,45 +432,136 @@ export const dictionaries = {
     },
     testimonials: {
       eyebrow: "Testimonios",
-      title: "Las sonrisas hablan más que las palabras.",
+      title: "Por qué los pacientes aman Allshine.",
       intro:
         "Escuche a los pacientes que confían en Allshine Dental Care para las sonrisas de sus familias.",
+      statsReviewsLabel: "reseñas",
+      statsWithLabel: "con una calificación general de",
+      statsRatingLabel: "estrellas",
+      leaveReviewCta: "Dejar una Reseña",
+      verifiedLabel: "Reseñas Verificadas de Google",
+      shareTitle: "Comparta su experiencia",
+      shareIntro:
+        "¿Le encantó su visita? Ayude a futuros pacientes a encontrarnos dejando una breve reseña. Puede publicar en Google o enviarnos su opinión directamente aquí.",
+      formName: "Su nombre",
+      formRelationship: "Soy…",
+      formRating: "Calificación",
+      formMessage: "Cuéntenos sobre su experiencia",
+      formSubmit: "Enviar Reseña",
+      formThankYou: "Gracias — ¡su reseña ha sido enviada!",
+      relationshipOptions: ["Paciente", "Paciente nuevo", "Padre/Madre", "Paciente de años"],
       list: [
         {
           name: "María G.",
+          role: "PACIENTE FAMILIAR",
           location: "Miami, FL",
+          date: "2026-03",
           quote:
             "La clínica dental más acogedora a la que he ido. Todo el equipo es bilingüe y muy paciente con mis hijos.",
         },
         {
           name: "James R.",
+          role: "PACIENTE ESTÉTICO",
           location: "Coral Gables, FL",
+          date: "2026-02",
           quote:
             "Vine por un blanqueamiento y salí con un rediseño completo de sonrisa. Encantado con el resultado.",
         },
         {
           name: "Lucía M.",
+          role: "PACIENTE NUEVO",
           location: "Doral, FL",
+          date: "2026-04",
           quote:
             "Desde la recepción hasta el doctor, todos me hicieron sentir cómoda. Por fin encontré mi hogar dental.",
         },
         {
           name: "David S.",
+          role: "PACIENTE",
           location: "Hialeah, FL",
+          date: "2026-01",
           quote:
             "Honestos, suaves y modernos. Me explicaron cada paso y el precio fue exactamente el cotizado.",
         },
         {
           name: "Andrea P.",
+          role: "PACIENTE DE INVISALIGN",
           location: "Kendall, FL",
+          date: "2025-12",
           quote:
             "La mejor experiencia con Invisalign. Mi sonrisa cambió y también mi confianza. Lo recomiendo.",
         },
         {
           name: "Carlos T.",
+          role: "PACIENTE",
           location: "Miami Beach, FL",
+          date: "2025-11",
           quote:
             "Después de años evitando al dentista, este equipo finalmente me hizo sentir seguro. Paciente de por vida.",
+        },
+        {
+          name: "Rosa V.",
+          role: "PACIENTE DE AÑOS",
+          location: "Miami, FL",
+          date: "2026-04",
+          quote:
+            "Llevamos años viniendo. La atención es consistente, el equipo es como familia y de verdad escuchan.",
+        },
+        {
+          name: "Michael B.",
+          role: "PACIENTE DE IMPLANTES",
+          location: "Aventura, FL",
+          date: "2025-10",
+          quote:
+            "Mis implantes se ven completamente naturales. Todo el proceso fue indoloro y el seguimiento increíble.",
+        },
+        {
+          name: "Sofía L.",
+          role: "MADRE",
+          location: "Brickell, FL",
+          date: "2026-03",
+          quote:
+            "Mis hijos esperan con ganas sus citas dentales. Eso por sí solo dice todo de este lugar.",
+        },
+        {
+          name: "Eduardo M.",
+          role: "PACIENTE DE CARILLAS",
+          location: "Miami Lakes, FL",
+          date: "2025-09",
+          quote:
+            "Mis carillas se ven justo como las imaginaba — naturales, brillantes, hechas a mi cara. Vale cada centavo.",
+        },
+        {
+          name: "Patricia W.",
+          role: "PACIENTE FAMILIAR",
+          location: "Westchester, FL",
+          date: "2026-02",
+          quote:
+            "Toda la familia viene aquí, de 7 a 72 años. Bilingüe, suave y nunca empujan tratamientos innecesarios.",
+        },
+        {
+          name: "Roberto A.",
+          role: "PACIENTE",
+          location: "Pinecrest, FL",
+          date: "2026-01",
+          quote:
+            "La mejor limpieza que he tenido. Suave, completa, y el consultorio se siente más como un spa.",
+        },
+        {
+          name: "Camila F.",
+          role: "PACIENTE ESTÉTICO",
+          location: "Coconut Grove, FL",
+          date: "2025-12",
+          quote:
+            "El blanqueamiento hizo una gran diferencia y el equipo me explicó todo. Muy feliz de haber venido.",
+        },
+        {
+          name: "Jorge H.",
+          role: "EMERGENCIA",
+          location: "Cutler Bay, FL",
+          date: "2025-11",
+          quote:
+            "Me partí un diente un sábado — me atendieron el mismo día. Profesional, rápido y la reparación perfecta.",
         },
       ],
     },
