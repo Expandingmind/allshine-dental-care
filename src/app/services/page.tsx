@@ -36,7 +36,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-cream-50 py-20">
+      <section className="bg-cream-100 py-20">
         <div className="section">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {t.services.list.map((s, i) => (
@@ -58,7 +58,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section className="bg-cream-100 py-20">
         <div className="section">
           <Reveal as="fade-up">
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950 px-8 py-12 text-center text-white shadow-2xl sm:px-16 sm:py-16">

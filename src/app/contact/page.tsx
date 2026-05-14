@@ -27,7 +27,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-cream-50 py-20">
+      <section className="bg-cream-100 py-20">
         <div className="section grid gap-12 lg:grid-cols-5">
           {/* Form */}
           <Reveal as="fade-right" className="lg:col-span-3">

@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-white">
+      <section className="relative overflow-hidden bg-cream-100">
         <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 animate-float rounded-full bg-brand-300/25 blur-3xl" />
         <div aria-hidden className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 animate-float rounded-full bg-accent-400/15 blur-3xl [animation-delay:1.5s]" />
         <div className="section grid items-center gap-12 py-14 md:grid-cols-2 md:py-24">
@@ -68,7 +68,7 @@ export default function HomePage() {
       </section>
 
       {/* FEATURES */}
-      <section className="bg-cream-50 py-20">
+      <section className="bg-cream-100 py-20">
         <div className="section">
           <Reveal as="fade-up">
             <div className="mx-auto max-w-2xl text-center">
@@ -118,7 +118,7 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES TEASER */}
-      <section className="bg-white py-20">
+      <section className="bg-cream-100 py-20">
         <div className="section">
           <Reveal as="fade-up">
             <div className="flex flex-wrap items-end justify-between gap-4">
@@ -202,7 +202,7 @@ export default function HomePage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-white py-20">
+      <section className="bg-cream-100 py-20">
         <div className="section">
           <Reveal as="fade-up">
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950 px-8 py-12 text-center text-white shadow-2xl sm:px-16 sm:py-16">

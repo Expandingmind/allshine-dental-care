@@ -37,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${allura.variable}`}>
-      <body className="min-h-screen bg-white">
+      <body className="min-h-screen bg-cream-100">
         <LanguageProvider>
           <Header />
           <main>{children}</main>

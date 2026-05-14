@@ -20,7 +20,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-cream-100 shadow-sm">
       {/* Top utility bar — BioHax-style: address, phone, appointment CTA, language */}
       <div className="bg-brand-950 text-white">
         <div className="section flex flex-wrap items-center justify-between gap-y-2 py-2 text-xs sm:text-sm">

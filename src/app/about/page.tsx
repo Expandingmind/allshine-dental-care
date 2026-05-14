@@ -9,7 +9,7 @@ export default function AboutPage() {
     <>
       <PageHero eyebrow={t.about.eyebrow} title={t.about.title} />
 
-      <section className="bg-white py-16">
+      <section className="bg-cream-100 py-20">
         <div className="section grid items-center gap-12 md:grid-cols-2">
           <Reveal as="fade-right">
             <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-gradient-to-br from-brand-500 via-brand-700 to-brand-900 shadow-2xl ring-1 ring-brand-300/30" />
@@ -57,7 +57,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-cream-50 py-20">
+      <section className="bg-cream-100 py-20">
         <div className="section text-center">
           <Reveal as="fade-up">
             <h2 className="h-display">{t.about.teamTitle}</h2>

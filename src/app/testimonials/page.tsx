@@ -96,7 +96,7 @@ function LeaveReviewSection() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section className="bg-cream-50 py-20">
+    <section className="bg-cream-100 py-20">
       <div className="section grid gap-10 lg:grid-cols-5">
         <Reveal as="fade-right" tag="div" className="lg:col-span-2">
           <p className="eyebrow">{t.testimonials.eyebrow}</p>
