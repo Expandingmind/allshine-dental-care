@@ -12,7 +12,7 @@ export default function AboutPage() {
       <section className="bg-cream-100 py-20">
         <div className="section grid items-center gap-12 md:grid-cols-2">
           <Reveal as="fade-right">
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-gradient-to-br from-brand-500 via-brand-700 to-brand-900 shadow-2xl ring-1 ring-brand-300/30" />
+            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-brand-700 shadow-2xl" />
           </Reveal>
           <Reveal as="fade-left" delay={150}>
             <p className="text-lg leading-relaxed text-slate-700">{t.about.intro}</p>
@@ -34,9 +34,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-brand-950 py-20 text-white">
-        <div aria-hidden className="pointer-events-none absolute -right-32 top-0 h-72 w-72 animate-float rounded-full bg-brand-700/30 blur-3xl" />
-        <div className="section relative">
+      <section className="bg-brand-950 py-20 text-white">
+        <div className="section">
           <Reveal as="fade-up">
             <h2 className="text-center font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               {t.about.valuesTitle}
@@ -67,7 +66,7 @@ export default function AboutPage() {
             {[1, 2, 3].map((i) => (
               <Reveal key={i} as="fade-up" delay={i * 120}>
                 <div className="group h-full rounded-3xl border border-brand-100 bg-white p-6 text-center shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl">
-                  <div className="mx-auto aspect-square w-32 overflow-hidden rounded-full bg-gradient-to-br from-brand-400 via-brand-600 to-brand-900 ring-2 ring-brand-100 transition-transform duration-500 group-hover:scale-105" />
+                  <div className="mx-auto aspect-square w-32 overflow-hidden rounded-full bg-brand-700 ring-2 ring-brand-100 transition-transform duration-500 group-hover:scale-105" />
                   <h3 className="mt-4 font-semibold text-brand-900">Dr. Placeholder</h3>
                   <p className="text-sm text-slate-500">Doctor of Dental Surgery</p>
                 </div>
@@ -82,10 +81,8 @@ export default function AboutPage() {
 
 function PageHero({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950 py-20 text-white">
-      <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 animate-float rounded-full bg-brand-500/20 blur-3xl" />
-      <div aria-hidden className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 animate-float rounded-full bg-accent-400/10 blur-3xl [animation-delay:1.5s]" />
-      <div className="section relative text-center">
+    <section className="bg-brand-950 py-20 text-white">
+      <div className="section text-center">
         <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
           {eyebrow}
         </p>

@@ -11,10 +11,8 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950 py-20 text-white">
-        <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 animate-float rounded-full bg-brand-500/20 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 animate-float rounded-full bg-accent-400/10 blur-3xl [animation-delay:1.5s]" />
-        <div className="section relative text-center">
+      <section className="bg-brand-950 py-20 text-white">
+        <div className="section text-center">
           <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
             {t.contact.eyebrow}
           </p>

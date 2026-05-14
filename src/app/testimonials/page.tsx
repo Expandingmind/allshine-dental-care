@@ -19,10 +19,8 @@ export default function TestimonialsPage() {
   return (
     <>
       {/* HERO with stats + Leave a Review CTA */}
-      <section className="relative overflow-hidden bg-brand-950 py-20 text-white">
-        <div aria-hidden className="pointer-events-none absolute -left-20 top-0 h-72 w-72 animate-float rounded-full bg-brand-700/40 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 animate-float rounded-full bg-accent-500/10 blur-3xl [animation-delay:1.5s]" />
-        <div className="section relative flex flex-wrap items-end justify-between gap-6">
+      <section className="bg-brand-950 py-20 text-white">
+        <div className="section flex flex-wrap items-end justify-between gap-6">
           <div className="opacity-0 animate-fade-up">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
               {t.testimonials.eyebrow}

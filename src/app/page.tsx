@@ -25,9 +25,7 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-cream-100">
-        <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 animate-float rounded-full bg-brand-300/25 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 animate-float rounded-full bg-accent-400/15 blur-3xl [animation-delay:1.5s]" />
+      <section className="bg-cream-100">
         <div className="section grid items-center gap-12 py-14 md:grid-cols-2 md:py-24">
           <div className="opacity-0 animate-fade-up">
             <p className="eyebrow">{t.home.heroEyebrow}</p>
@@ -45,7 +43,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="relative opacity-0 animate-fade-up [animation-delay:200ms]">
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-gradient-to-br from-brand-500 via-brand-700 to-brand-900 shadow-2xl ring-1 ring-brand-400/20">
+            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-brand-700 shadow-2xl">
               <div className="flex h-full items-start p-6 sm:p-8">
                 <div className="rounded-2xl bg-cream-100/95 p-5 shadow-lg backdrop-blur">
                   <p className="text-xs font-semibold uppercase tracking-wider text-brand-700">
@@ -95,12 +93,10 @@ export default function HomePage() {
       </section>
 
       {/* ABOUT TEASER — dark drama break */}
-      <section className="relative overflow-hidden bg-brand-950 py-20 text-white">
-        <div aria-hidden className="pointer-events-none absolute -right-20 top-0 h-72 w-72 animate-float rounded-full bg-brand-700/40 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -left-32 bottom-0 h-96 w-96 animate-float rounded-full bg-brand-500/20 blur-3xl [animation-delay:2s]" />
-        <div className="section relative grid items-center gap-12 md:grid-cols-2">
+      <section className="bg-brand-950 py-20 text-white">
+        <div className="section grid items-center gap-12 md:grid-cols-2">
           <Reveal as="fade-right">
-            <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-gradient-to-tr from-brand-700 via-brand-600 to-brand-400 ring-1 ring-brand-300/30 shadow-2xl" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-brand-700 shadow-2xl" />
           </Reveal>
           <Reveal as="fade-left" delay={150}>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
@@ -202,20 +198,16 @@ export default function HomePage() {
       <section className="bg-cream-100 py-20">
         <div className="section">
           <Reveal as="fade-up">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950 px-8 py-12 text-center text-white shadow-2xl sm:px-16 sm:py-16">
-              <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 animate-float rounded-full bg-brand-400/20 blur-3xl" />
-              <div aria-hidden className="pointer-events-none absolute -left-20 -bottom-20 h-72 w-72 animate-float rounded-full bg-accent-400/15 blur-3xl [animation-delay:1.5s]" />
-              <div className="relative">
-                <h2 className="font-display text-3xl font-bold sm:text-4xl">
-                  {t.home.ctaTitle}
-                </h2>
-                <p className="mx-auto mt-3 max-w-xl text-brand-100">
-                  {t.home.ctaBody}
-                </p>
-                <Link href="/contact" className="btn-cream mt-8">
-                  {t.home.ctaButton}
-                </Link>
-              </div>
+            <div className="rounded-3xl bg-brand-950 px-8 py-12 text-center text-white shadow-2xl sm:px-16 sm:py-16">
+              <h2 className="font-display text-3xl font-bold sm:text-4xl">
+                {t.home.ctaTitle}
+              </h2>
+              <p className="mx-auto mt-3 max-w-xl text-brand-100">
+                {t.home.ctaBody}
+              </p>
+              <Link href="/contact" className="btn-cream mt-8">
+                {t.home.ctaButton}
+              </Link>
             </div>
           </Reveal>
         </div>

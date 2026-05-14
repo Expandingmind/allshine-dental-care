@@ -20,10 +20,8 @@ export default function ServicesPage() {
   const { t } = useLanguage();
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950 py-20 text-white">
-        <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 animate-float rounded-full bg-brand-500/20 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 animate-float rounded-full bg-accent-400/10 blur-3xl [animation-delay:1.5s]" />
-        <div className="section relative text-center">
+      <section className="bg-brand-950 py-20 text-white">
+        <div className="section text-center">
           <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
             {t.services.eyebrow}
           </p>
@@ -61,20 +59,16 @@ export default function ServicesPage() {
       <section className="bg-cream-100 py-20">
         <div className="section">
           <Reveal as="fade-up">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950 px-8 py-12 text-center text-white shadow-2xl sm:px-16 sm:py-16">
-              <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 animate-float rounded-full bg-brand-400/20 blur-3xl" />
-              <div aria-hidden className="pointer-events-none absolute -left-20 -bottom-20 h-72 w-72 animate-float rounded-full bg-accent-400/15 blur-3xl [animation-delay:1.5s]" />
-              <div className="relative">
-                <h2 className="font-display text-3xl font-bold sm:text-4xl">
-                  Not sure what you need?
-                </h2>
-                <p className="mx-auto mt-3 max-w-xl text-brand-100">
-                  Book a consultation — we&apos;ll help you find the right plan for your smile.
-                </p>
-                <Link href="/contact" className="btn-cream mt-8">
-                  Book an Appointment
-                </Link>
-              </div>
+            <div className="rounded-3xl bg-brand-950 px-8 py-12 text-center text-white shadow-2xl sm:px-16 sm:py-16">
+              <h2 className="font-display text-3xl font-bold sm:text-4xl">
+                Not sure what you need?
+              </h2>
+              <p className="mx-auto mt-3 max-w-xl text-brand-100">
+                Book a consultation — we&apos;ll help you find the right plan for your smile.
+              </p>
+              <Link href="/contact" className="btn-cream mt-8">
+                Book an Appointment
+              </Link>
             </div>
           </Reveal>
         </div>
