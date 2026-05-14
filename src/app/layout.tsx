@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Allura } from "next/font/google";
 import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -17,6 +17,13 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+const allura = Allura({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-script",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Allshine Dental Care — Family & Cosmetic Dentistry in Miami",
   description:
@@ -29,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${allura.variable}`}>
       <body className="min-h-screen bg-white">
         <LanguageProvider>
           <Header />

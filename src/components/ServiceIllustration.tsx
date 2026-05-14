@@ -29,15 +29,17 @@ export function ServiceIllustration({ kind }: { kind: ServiceKind }) {
 }
 
 function gradientStops(kind: ServiceKind) {
+  // All service illustrations live in the brand green family — light cream/mint
+  // gradients flow into different shades of the forest-green anchor.
   const map: Record<ServiceKind, [string, string]> = {
-    preventive: ["#d3f6f3", "#73dfd9"],
-    cosmetic: ["#fff3d4", "#f7c873"],
-    restorative: ["#fce7c2", "#e8a93a"],
-    implants: ["#aceeea", "#1aada8"],
-    ortho: ["#e0f2fe", "#7dd3fc"],
-    pediatric: ["#fde2f3", "#f9a8d4"],
-    "root-canal": ["#cffafe", "#22d3ee"],
-    emergency: ["#fee2e2", "#fb7185"],
+    preventive: ["#f7f0db", "#69ad88"],   // cream → soft green
+    cosmetic: ["#ecf5f0", "#3f8d63"],     // pale → medium green
+    restorative: ["#cfe5d8", "#175a3a"],  // light green → deep
+    implants: ["#9fcbb1", "#0e4a35"],     // mid → dark forest
+    ortho: ["#ecf5f0", "#216f4a"],        // pale → forest
+    pediatric: ["#bfe7cf", "#56b87f"],    // soft → bright pop
+    "root-canal": ["#cfe5d8", "#0c3a2c"], // light → very dark
+    emergency: ["#9fcbb1", "#0a2c20"],    // mid → very dark
   };
   const [a, b] = map[kind];
   return (
@@ -56,8 +58,8 @@ function illustration(kind: ServiceKind) {
           <Tooth x={100} y={85} scale={1} />
           {/* Toothbrush */}
           <g transform="translate(40 95) rotate(-25)">
-            <rect x="0" y="0" width="60" height="9" rx="4" fill="#fff" stroke="#0f6f6e" strokeWidth="1.5" />
-            <rect x="55" y="-3" width="20" height="15" rx="2" fill="#0f8b88" />
+            <rect x="0" y="0" width="60" height="9" rx="4" fill="#fff" stroke="#0a2c20" strokeWidth="1.5" />
+            <rect x="55" y="-3" width="20" height="15" rx="2" fill="#0e4a35" />
             {Array.from({ length: 5 }).map((_, i) => (
               <line key={i} x1={59 + i * 3.5} y1="-3" x2={59 + i * 3.5} y2="-7" stroke="#fff" strokeWidth="1.2" />
             ))}
@@ -82,18 +84,18 @@ function illustration(kind: ServiceKind) {
     case "restorative":
       return (
         <g>
-          {/* Crown */}
+          {/* Porcelain crown */}
           <path
             d="M70 55 L80 38 L90 50 L100 32 L110 50 L120 38 L130 55 Z"
-            fill="#f7c873"
-            stroke="#c98a1f"
+            fill="#fdfaf0"
+            stroke="#0a2c20"
             strokeWidth="1.5"
             strokeLinejoin="round"
           />
-          <rect x="68" y="55" width="64" height="10" fill="#e8a93a" stroke="#c98a1f" strokeWidth="1.5" />
-          <circle cx="85" cy="46" r="3" fill="#fff" />
-          <circle cx="100" cy="40" r="3" fill="#fff" />
-          <circle cx="115" cy="46" r="3" fill="#fff" />
+          <rect x="68" y="55" width="64" height="10" fill="#eadcb3" stroke="#0a2c20" strokeWidth="1.5" />
+          <circle cx="85" cy="46" r="3" fill="#56b87f" />
+          <circle cx="100" cy="40" r="3" fill="#56b87f" />
+          <circle cx="115" cy="46" r="3" fill="#56b87f" />
           <Tooth x={100} y={105} scale={0.85} />
         </g>
       );
@@ -137,9 +139,9 @@ function illustration(kind: ServiceKind) {
         <g>
           <Tooth x={100} y={85} scale={1.1} fill="#fff" />
           {/* Smile face on tooth */}
-          <circle cx="92" cy="78" r="2.5" fill="#0f6f6e" />
-          <circle cx="108" cy="78" r="2.5" fill="#0f6f6e" />
-          <path d="M90 92 q10 8 20 0" stroke="#0f6f6e" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+          <circle cx="92" cy="78" r="2.5" fill="#0a2c20" />
+          <circle cx="108" cy="78" r="2.5" fill="#0a2c20" />
+          <path d="M90 92 q10 8 20 0" stroke="#0a2c20" strokeWidth="2.2" fill="none" strokeLinecap="round" />
           <Sparkle x={55} y={50} size={5} color="#fff" />
           <Sparkle x={145} y={55} size={6} color="#fff" />
         </g>
@@ -151,14 +153,14 @@ function illustration(kind: ServiceKind) {
           <path
             d="M100 35 c-15 0 -22 8 -22 18 0 14 5 24 7 35 c2 11 5 30 13 30 c5 0 5 -10 12 -10 s5 10 11 10 c8 0 11 -19 13 -30 c2 -11 7 -21 7 -35 c0 -10 -7 -18 -22 -18 c-7 0 -10 5 -19 0 z"
             fill="#fff"
-            stroke="#0f6f6e"
+            stroke="#0a2c20"
             strokeWidth="1.5"
           />
           {/* Visible roots/canals inside */}
-          <path d="M92 70 L88 110" stroke="#22d3ee" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-          <path d="M108 70 L112 110" stroke="#22d3ee" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-          <circle cx="92" cy="68" r="2.5" fill="#0f6f6e" />
-          <circle cx="108" cy="68" r="2.5" fill="#0f6f6e" />
+          <path d="M92 70 L88 110" stroke="#56b87f" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+          <path d="M108 70 L112 110" stroke="#56b87f" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+          <circle cx="92" cy="68" r="2.5" fill="#0a2c20" />
+          <circle cx="108" cy="68" r="2.5" fill="#0a2c20" />
         </g>
       );
     case "emergency":
@@ -190,7 +192,7 @@ function Tooth({
       <path
         d="M12 0c2.7 0 4 1.5 5.7 1.5 1.6 0 2.9 1.1 2.9 3.4 0 2.6-1 4.6-1.5 6.7-.6 2.4-1.3 7.2-3.7 7.2-1.7 0-1.9-2.5-3.4-2.5s-1.7 2.5-3.4 2.5c-2.4 0-3.1-4.8-3.7-7.2C4.4 9.4 3.4 7.4 3.4 4.9c0-2.3 1.3-3.4 2.9-3.4C8 1.5 9.3 0 12 0Z"
         fill={fill}
-        stroke="#0f6f6e"
+        stroke="#0a2c20"
         strokeWidth="1.2"
         strokeLinejoin="round"
       />

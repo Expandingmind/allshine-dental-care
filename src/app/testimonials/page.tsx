@@ -6,6 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 import { Marquee } from "@/components/Marquee";
 import { GoogleLogo } from "@/components/GoogleLogo";
 import { ReviewCard } from "@/components/ReviewCard";
+import { Reveal } from "@/components/Reveal";
 
 export default function TestimonialsPage() {
   const { t, locale } = useLanguage();
@@ -18,11 +19,11 @@ export default function TestimonialsPage() {
   return (
     <>
       {/* HERO with stats + Leave a Review CTA */}
-      <section className="relative overflow-hidden bg-brand-950 py-16 text-white">
-        <div aria-hidden className="pointer-events-none absolute -left-20 top-0 h-72 w-72 rounded-full bg-brand-700/40 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-accent-500/10 blur-3xl" />
+      <section className="relative overflow-hidden bg-brand-950 py-20 text-white">
+        <div aria-hidden className="pointer-events-none absolute -left-20 top-0 h-72 w-72 animate-float rounded-full bg-brand-700/40 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 animate-float rounded-full bg-accent-500/10 blur-3xl [animation-delay:1.5s]" />
         <div className="section relative flex flex-wrap items-end justify-between gap-6">
-          <div>
+          <div className="opacity-0 animate-fade-up">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
               {t.testimonials.eyebrow}
             </p>
@@ -52,7 +53,7 @@ export default function TestimonialsPage() {
             href={siteConfig.googleReviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+            className="opacity-0 animate-fade-up [animation-delay:200ms] inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5"
           >
             <ChatIcon className="h-4 w-4" />
             {t.testimonials.leaveReviewCta}
@@ -95,9 +96,9 @@ function LeaveReviewSection() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-cream-50 py-20">
       <div className="section grid gap-10 lg:grid-cols-5">
-        <div className="lg:col-span-2">
+        <Reveal as="fade-right" tag="div" className="lg:col-span-2">
           <p className="eyebrow">{t.testimonials.eyebrow}</p>
           <h2 className="h-display mt-3">{t.testimonials.shareTitle}</h2>
           <p className="mt-4 text-slate-600">{t.testimonials.shareIntro}</p>
@@ -105,53 +106,55 @@ function LeaveReviewSection() {
             href={siteConfig.googleReviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:border-brand-300 hover:bg-brand-50"
+            className="mt-6 inline-flex items-center gap-3 rounded-full border border-brand-200 bg-white px-5 py-3 text-sm font-semibold text-brand-900 shadow-sm transition-all duration-300 hover:border-brand-400 hover:shadow-md hover:-translate-y-0.5"
           >
             <GoogleLogo className="h-5 w-5" />
             {t.testimonials.leaveReviewCta} on Google
           </a>
-        </div>
+        </Reveal>
 
-        <form
-          className="space-y-4 rounded-3xl border border-slate-100 bg-slate-50/60 p-8 lg:col-span-3"
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSubmitted(true);
-          }}
-        >
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Field label={t.testimonials.formName} name="name" required />
-            <SelectField
-              label={t.testimonials.formRelationship}
-              name="relationship"
-              options={[...t.testimonials.relationshipOptions]}
+        <Reveal as="fade-left" delay={150} className="lg:col-span-3">
+          <form
+            className="space-y-4 rounded-3xl border border-brand-100 bg-white p-8 shadow-lg"
+            onSubmit={(e) => {
+              e.preventDefault();
+              setSubmitted(true);
+            }}
+          >
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Field label={t.testimonials.formName} name="name" required />
+              <SelectField
+                label={t.testimonials.formRelationship}
+                name="relationship"
+                options={[...t.testimonials.relationshipOptions]}
+              />
+            </div>
+
+            <div>
+              <span className="mb-1 block text-xs font-semibold text-slate-700">
+                {t.testimonials.formRating}
+              </span>
+              <StarPicker value={rating} onChange={setRating} />
+            </div>
+
+            <Field
+              label={t.testimonials.formMessage}
+              name="message"
+              as="textarea"
+              required
             />
-          </div>
 
-          <div>
-            <span className="mb-1 block text-xs font-semibold text-slate-700">
-              {t.testimonials.formRating}
-            </span>
-            <StarPicker value={rating} onChange={setRating} />
-          </div>
+            <button type="submit" className="btn-primary w-full sm:w-auto">
+              {t.testimonials.formSubmit}
+            </button>
 
-          <Field
-            label={t.testimonials.formMessage}
-            name="message"
-            as="textarea"
-            required
-          />
-
-          <button type="submit" className="btn-primary w-full sm:w-auto">
-            {t.testimonials.formSubmit}
-          </button>
-
-          {submitted && (
-            <p className="text-sm font-medium text-brand-700">
-              ✓ {t.testimonials.formThankYou}
-            </p>
-          )}
-        </form>
+            {submitted && (
+              <p className="text-sm font-medium text-brand-700">
+                ✓ {t.testimonials.formThankYou}
+              </p>
+            )}
+          </form>
+        </Reveal>
       </div>
     </section>
   );

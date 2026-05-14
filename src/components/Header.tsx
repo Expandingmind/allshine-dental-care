@@ -40,7 +40,7 @@ export function Header() {
           <div className="ml-auto flex items-center gap-3">
             <Link
               href={siteConfig.bookingUrl}
-              className="inline-flex items-center gap-2 rounded-full bg-accent-500 px-4 py-1.5 text-xs font-semibold text-brand-950 shadow-sm transition hover:bg-accent-400"
+              className="inline-flex items-center gap-2 rounded-full bg-cream-100 px-4 py-1.5 text-xs font-semibold text-brand-900 shadow-sm transition-all duration-300 hover:bg-white hover:shadow-md hover:-translate-y-0.5"
             >
               <CalendarIcon className="h-4 w-4" />
               {t.nav.bookAppointment}
@@ -53,7 +53,7 @@ export function Header() {
       {/* Main navigation */}
       <div className="border-b border-slate-100">
         <div className="section flex items-center justify-between py-3">
-          <Logo size={56} />
+          <Logo size={104} mobileSize={64} />
 
           <nav className="hidden items-center gap-1 lg:flex">
             {navItems.map((item) => (

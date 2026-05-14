@@ -20,7 +20,7 @@ export function Footer() {
     <footer className="bg-brand-950 text-brand-100">
       <div className="section grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <Logo size={88} />
+          <Logo size={140} mobileSize={100} />
           <p className="mt-4 max-w-sm text-sm text-brand-200">{t.footer.tagline}</p>
           <div className="mt-6 flex gap-3">
             <a

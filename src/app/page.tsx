@@ -6,6 +6,7 @@ import { ServiceIllustration, type ServiceKind } from "@/components/ServiceIllus
 import { Marquee } from "@/components/Marquee";
 import { ReviewCard } from "@/components/ReviewCard";
 import { GoogleLogo } from "@/components/GoogleLogo";
+import { Reveal } from "@/components/Reveal";
 import { siteConfig } from "@/lib/site-config";
 
 const SERVICE_KINDS: ServiceKind[] = [
@@ -25,13 +26,13 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-white">
-        <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand-300/25 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-accent-400/15 blur-3xl" />
-        <div className="section grid items-center gap-12 py-16 md:grid-cols-2 md:py-24">
-          <div>
+        <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 animate-float rounded-full bg-brand-300/25 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 animate-float rounded-full bg-accent-400/15 blur-3xl [animation-delay:1.5s]" />
+        <div className="section grid items-center gap-12 py-14 md:grid-cols-2 md:py-24">
+          <div className="opacity-0 animate-fade-up">
             <p className="eyebrow">{t.home.heroEyebrow}</p>
-            <h1 className="h-display mt-4">{t.home.heroTitle}</h1>
-            <p className="mt-5 max-w-lg text-lg text-slate-600">
+            <h1 className="h-script mt-4">{t.home.heroTitle}</h1>
+            <p className="mt-6 max-w-lg text-lg text-slate-600">
               {t.home.heroSubtitle}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -43,20 +44,20 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="relative">
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-gradient-to-br from-brand-300 to-brand-700 shadow-xl">
+          <div className="relative opacity-0 animate-fade-up [animation-delay:200ms]">
+            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-gradient-to-br from-brand-500 via-brand-700 to-brand-900 shadow-2xl ring-1 ring-brand-400/20">
               <div className="flex h-full items-end p-8">
-                <div className="rounded-2xl bg-white/95 p-5 shadow-lg backdrop-blur">
+                <div className="rounded-2xl bg-cream-100/95 p-5 shadow-lg backdrop-blur">
                   <p className="text-xs font-semibold uppercase tracking-wider text-brand-700">
                     {t.home.heroEyebrow}
                   </p>
-                  <p className="mt-2 text-lg font-semibold text-slate-900">
+                  <p className="mt-2 text-lg font-semibold text-brand-900">
                     {t.home.aboutTitle}
                   </p>
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white p-4 shadow-xl md:block">
+            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white p-4 shadow-xl ring-1 ring-brand-100 md:block">
               <p className="text-3xl font-bold text-brand-700">15+</p>
               <p className="text-xs uppercase tracking-wider text-slate-500">
                 years of trusted care
@@ -67,26 +68,27 @@ export default function HomePage() {
       </section>
 
       {/* FEATURES */}
-      <section className="bg-white py-20">
+      <section className="bg-cream-50 py-20">
         <div className="section">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">{t.home.featuresEyebrow}</p>
-            <h2 className="h-display mt-3">{t.home.featuresTitle}</h2>
-          </div>
+          <Reveal as="fade-up">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow">{t.home.featuresEyebrow}</p>
+              <h2 className="h-display mt-3">{t.home.featuresTitle}</h2>
+            </div>
+          </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {t.home.features.map((f) => (
-              <div
-                key={f.title}
-                className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <div className="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-700">
-                  <CheckIcon className="h-6 w-6" />
+            {t.home.features.map((f, i) => (
+              <Reveal key={f.title} as="fade-up" delay={i * 100}>
+                <div className="group h-full rounded-2xl border border-brand-100 bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:border-brand-300">
+                  <div className="grid h-11 w-11 place-items-center rounded-xl bg-brand-700 text-white transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                    <CheckIcon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-4 text-lg font-semibold text-brand-900">
+                    {f.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-slate-600">{f.body}</p>
                 </div>
-                <h3 className="mt-4 text-lg font-semibold text-slate-900">
-                  {f.title}
-                </h3>
-                <p className="mt-2 text-sm text-slate-600">{f.body}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -94,10 +96,13 @@ export default function HomePage() {
 
       {/* ABOUT TEASER — dark drama break */}
       <section className="relative overflow-hidden bg-brand-950 py-20 text-white">
-        <div aria-hidden className="pointer-events-none absolute -right-20 top-0 h-72 w-72 rounded-full bg-brand-700/40 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -right-20 top-0 h-72 w-72 animate-float rounded-full bg-brand-700/40 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -left-32 bottom-0 h-96 w-96 animate-float rounded-full bg-brand-500/20 blur-3xl [animation-delay:2s]" />
         <div className="section relative grid items-center gap-12 md:grid-cols-2">
-          <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-gradient-to-tr from-brand-500 to-brand-800 ring-1 ring-brand-400/30" />
-          <div>
+          <Reveal as="fade-right">
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-gradient-to-tr from-brand-700 via-brand-600 to-brand-400 ring-1 ring-brand-300/30 shadow-2xl" />
+          </Reveal>
+          <Reveal as="fade-left" delay={150}>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
               {t.home.aboutEyebrow}
             </p>
@@ -105,42 +110,42 @@ export default function HomePage() {
               {t.home.aboutTitle}
             </h2>
             <p className="mt-4 text-brand-100">{t.home.aboutBody}</p>
-            <Link
-              href="/about"
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-accent-500 px-6 py-3 text-sm font-semibold text-brand-950 shadow-sm transition hover:bg-accent-400"
-            >
+            <Link href="/about" className="btn-cream mt-6">
               {t.home.aboutCta}
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* SERVICES TEASER */}
       <section className="bg-white py-20">
         <div className="section">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="eyebrow">{t.home.servicesEyebrow}</p>
-              <h2 className="h-display mt-3">{t.home.servicesTitle}</h2>
+          <Reveal as="fade-up">
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p className="eyebrow">{t.home.servicesEyebrow}</p>
+                <h2 className="h-display mt-3">{t.home.servicesTitle}</h2>
+              </div>
+              <Link href="/services" className="btn-secondary">
+                {t.home.servicesCta}
+              </Link>
             </div>
-            <Link href="/services" className="btn-secondary">
-              {t.home.servicesCta}
-            </Link>
-          </div>
+          </Reveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {t.services.list.slice(0, 6).map((s, i) => (
-              <article
-                key={s.title}
-                className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-lg"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <ServiceIllustration kind={SERVICE_KINDS[i]} />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-slate-900">{s.title}</h3>
-                  <p className="mt-2 text-sm text-slate-600">{s.body}</p>
-                </div>
-              </article>
+              <Reveal key={s.title} as="fade-up" delay={i * 80}>
+                <article className="group h-full overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-brand-300 hover:shadow-2xl">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
+                      <ServiceIllustration kind={SERVICE_KINDS[i]} />
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-brand-900">{s.title}</h3>
+                    <p className="mt-2 text-sm text-slate-600">{s.body}</p>
+                  </div>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -149,27 +154,29 @@ export default function HomePage() {
       {/* TESTIMONIALS TEASER */}
       <section className="bg-brand-950 py-20 text-white">
         <div className="section">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
-              {t.home.testimonialsEyebrow}
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-              {t.home.testimonialsTitle}
-            </h2>
-            <div className="mt-4 inline-flex items-center gap-2 text-sm text-brand-100">
-              <span className="inline-flex gap-0.5 text-accent-400">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <StarIcon key={i} className="h-4 w-4" />
-                ))}
-              </span>
-              <span>
-                <strong className="text-white">
-                  {siteConfig.reviewStats.average.toFixed(1)}
-                </strong>{" "}
-                · {siteConfig.reviewStats.count}+ {t.testimonials.statsReviewsLabel}
-              </span>
+          <Reveal as="fade-up">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
+                {t.home.testimonialsEyebrow}
+              </p>
+              <h2 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+                {t.home.testimonialsTitle}
+              </h2>
+              <div className="mt-4 inline-flex flex-wrap items-center justify-center gap-2 text-sm text-brand-100">
+                <span className="inline-flex gap-0.5 text-accent-400">
+                  {[0, 1, 2, 3, 4].map((i) => (
+                    <StarIcon key={i} className="h-4 w-4" />
+                  ))}
+                </span>
+                <span>
+                  <strong className="text-white">
+                    {siteConfig.reviewStats.average.toFixed(1)}
+                  </strong>{" "}
+                  · {siteConfig.reviewStats.count}+ {t.testimonials.statsReviewsLabel}
+                </span>
+              </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         <div className="mt-10">
@@ -187,7 +194,7 @@ export default function HomePage() {
           </span>
           <Link
             href="/testimonials"
-            className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5"
           >
             {t.home.testimonialsCta}
           </Link>
@@ -197,20 +204,23 @@ export default function HomePage() {
       {/* FINAL CTA */}
       <section className="bg-white py-20">
         <div className="section">
-          <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 to-brand-800 px-8 py-12 text-center text-white shadow-xl sm:px-16 sm:py-16">
-            <h2 className="font-display text-3xl font-bold sm:text-4xl">
-              {t.home.ctaTitle}
-            </h2>
-            <p className="mx-auto mt-3 max-w-xl text-brand-100">
-              {t.home.ctaBody}
-            </p>
-            <Link
-              href="/contact"
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-accent-500 px-7 py-3 text-sm font-semibold text-brand-950 shadow-sm transition hover:bg-accent-400"
-            >
-              {t.home.ctaButton}
-            </Link>
-          </div>
+          <Reveal as="fade-up">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950 px-8 py-12 text-center text-white shadow-2xl sm:px-16 sm:py-16">
+              <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 animate-float rounded-full bg-brand-400/20 blur-3xl" />
+              <div aria-hidden className="pointer-events-none absolute -left-20 -bottom-20 h-72 w-72 animate-float rounded-full bg-accent-400/15 blur-3xl [animation-delay:1.5s]" />
+              <div className="relative">
+                <h2 className="font-display text-3xl font-bold sm:text-4xl">
+                  {t.home.ctaTitle}
+                </h2>
+                <p className="mx-auto mt-3 max-w-xl text-brand-100">
+                  {t.home.ctaBody}
+                </p>
+                <Link href="/contact" className="btn-cream mt-8">
+                  {t.home.ctaButton}
+                </Link>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
     </>

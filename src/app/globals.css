@@ -31,10 +31,13 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600;
+    @apply inline-flex items-center justify-center rounded-full bg-brand-700 px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:bg-brand-800 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-full border border-brand-600 px-6 py-3 text-sm font-semibold text-brand-700 transition hover:bg-brand-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600;
+    @apply inline-flex items-center justify-center rounded-full border border-brand-700 px-7 py-3.5 text-sm font-semibold text-brand-800 transition-all duration-300 hover:bg-brand-50 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600;
+  }
+  .btn-cream {
+    @apply inline-flex items-center justify-center rounded-full bg-cream-100 px-7 py-3.5 text-sm font-semibold text-brand-900 shadow-sm transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-0.5;
   }
   .section {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
@@ -46,4 +49,19 @@ body {
     font-family: var(--font-display);
     @apply text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl;
   }
+  .h-script {
+    font-family: var(--font-script);
+    @apply text-5xl font-normal leading-[1.1] tracking-tight text-brand-700 sm:text-7xl;
+  }
+}
+
+/* Subtle bg shimmer for hero blobs */
+.bg-shimmer {
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
 }

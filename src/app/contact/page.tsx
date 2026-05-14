@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { siteConfig, formatAddress } from "@/lib/site-config";
+import { Reveal } from "@/components/Reveal";
 
 export default function ContactPage() {
   const { t } = useLanguage();
@@ -10,22 +11,26 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-brand-700 to-brand-900 py-16 text-white">
-        <div className="section text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
+      <section className="relative overflow-hidden bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950 py-20 text-white">
+        <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 animate-float rounded-full bg-brand-500/20 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 animate-float rounded-full bg-accent-400/10 blur-3xl [animation-delay:1.5s]" />
+        <div className="section relative text-center">
+          <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
             {t.contact.eyebrow}
           </p>
-          <h1 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+          <h1 className="opacity-0 animate-fade-up [animation-delay:150ms] mt-3 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
             {t.contact.title}
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-brand-100">{t.contact.intro}</p>
+          <p className="opacity-0 animate-fade-up [animation-delay:300ms] mx-auto mt-4 max-w-2xl text-brand-100">
+            {t.contact.intro}
+          </p>
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="bg-cream-50 py-20">
         <div className="section grid gap-12 lg:grid-cols-5">
           {/* Form */}
-          <div className="lg:col-span-3">
+          <Reveal as="fade-right" className="lg:col-span-3">
             <h2 className="font-display text-2xl font-bold text-slate-900">
               {t.contact.formTitle}
             </h2>
@@ -57,10 +62,10 @@ export default function ContactPage() {
               )}
               <p className="text-xs text-slate-400">{t.contact.formNote}</p>
             </form>
-          </div>
+          </Reveal>
 
           {/* Info */}
-          <aside className="rounded-3xl bg-brand-950 p-8 text-white lg:col-span-2">
+          <Reveal as="fade-left" delay={150} tag="aside" className="rounded-3xl bg-brand-950 p-8 text-white shadow-2xl lg:col-span-2">
             <h2 className="font-display text-2xl font-bold text-white">
               {t.contact.infoTitle}
             </h2>
@@ -93,7 +98,7 @@ export default function ContactPage() {
                 </dd>
               </div>
             </dl>
-          </aside>
+          </Reveal>
         </div>
       </section>
     </>
