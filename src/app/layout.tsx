@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Pinyon_Script } from "next/font/google";
+import { Inter, Playfair_Display, Great_Vibes } from "next/font/google";
 import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const pinyonScript = Pinyon_Script({
+const greatVibes = Great_Vibes({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-script",
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} ${pinyonScript.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${greatVibes.variable}`}>
       <body className="min-h-screen bg-cream-100">
         <LanguageProvider>
           <Header />
