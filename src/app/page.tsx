@@ -46,7 +46,7 @@ export default function HomePage() {
           </div>
           <div className="relative opacity-0 animate-fade-up [animation-delay:200ms]">
             <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-gradient-to-br from-brand-500 via-brand-700 to-brand-900 shadow-2xl ring-1 ring-brand-400/20">
-              <div className="flex h-full items-end p-8">
+              <div className="flex h-full items-start p-6 sm:p-8">
                 <div className="rounded-2xl bg-cream-100/95 p-5 shadow-lg backdrop-blur">
                   <p className="text-xs font-semibold uppercase tracking-wider text-brand-700">
                     {t.home.heroEyebrow}
@@ -57,7 +57,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white p-4 shadow-xl ring-1 ring-brand-100 md:block">
+            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white p-4 shadow-xl ring-1 ring-brand-100 sm:block">
               <p className="text-3xl font-bold text-brand-700">15+</p>
               <p className="text-xs uppercase tracking-wider text-slate-500">
                 years of trusted care
