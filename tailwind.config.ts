@@ -5,19 +5,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Deep forest green — the new brand anchor
+        // Deep forest green — tuned to match Reserve Padel's "Inquire Here" green
         brand: {
-          50: "#ecf5f0",
-          100: "#cfe5d8",
-          200: "#9fcbb1",
-          300: "#69ad88",
-          400: "#3f8d63",
-          500: "#216f4a",
-          600: "#175a3a",
-          700: "#0e4a35",
-          800: "#0c3a2c",
-          900: "#0a2c20",
-          950: "#061a13",
+          50: "#edf5ee",
+          100: "#cee5d3",
+          200: "#9fcdab",
+          300: "#6cae7d",
+          400: "#3f8e58",
+          500: "#23733e",
+          600: "#1c6235",
+          700: "#185a31",
+          800: "#114229",
+          900: "#0a2d1d",
+          950: "#04190e",
         },
         // Lighter green for CTA pops on dark sections
         accent: {

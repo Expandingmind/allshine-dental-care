@@ -53,9 +53,9 @@ export default function TestimonialsPage() {
             href={siteConfig.googleReviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-0 animate-fade-up [animation-delay:200ms] inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5"
+            className="btn-outline-light opacity-0 animate-fade-up [animation-delay:200ms]"
           >
-            <ChatIcon className="h-4 w-4" />
+            <ChatIcon className="mr-2 h-4 w-4" />
             {t.testimonials.leaveReviewCta}
           </a>
         </div>

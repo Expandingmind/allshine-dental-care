@@ -192,10 +192,7 @@ export default function HomePage() {
             <GoogleLogo className="h-4 w-4" />
             {t.testimonials.verifiedLabel}
           </span>
-          <Link
-            href="/testimonials"
-            className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5"
-          >
+          <Link href="/testimonials" className="btn-outline-light">
             {t.home.testimonialsCta}
           </Link>
         </div>
