@@ -9,7 +9,7 @@ export const siteConfig = {
   },
   phoneDisplay: "(305) 686-4510",
   phoneHref: "tel:+13056864510",
-  email: "hello@allshinedental.com",
+  email: "Info@allshinedentalcare.com",
   bookingUrl: "/contact",
   googleReviewUrl: "https://g.page/r/PLACEHOLDER/review",
   reviewStats: {
