@@ -5,23 +5,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Warm gold spectrum — from the Allshine logo gold mark
         brand: {
-          50: "#eefcfb",
-          100: "#d3f6f3",
-          200: "#aceeea",
-          300: "#73dfd9",
-          400: "#3ec8c2",
-          500: "#1aada8",
-          600: "#0f8b88",
-          700: "#0f6f6e",
-          800: "#11595a",
-          900: "#124a4b",
-          950: "#042a2c",
+          50: "#fbf6e7",
+          100: "#f5e6c2",
+          200: "#ebd28a",
+          300: "#ddb555",
+          400: "#c79a35",
+          500: "#b08330",
+          600: "#8e6824",
+          700: "#6e5020",
+          800: "#543c1c",
+          900: "#3e2c16",
+          950: "#221608",
         },
+        // Lighter honey for CTAs / highlights
         accent: {
-          400: "#f7c873",
-          500: "#e8a93a",
-          600: "#c98a1f",
+          400: "#e8c87a",
+          500: "#d8b06a",
+          600: "#b08330",
+        },
+        // Cream backdrop matching the logo card
+        cream: {
+          50: "#fdfaf0",
+          100: "#f7f0db",
+          200: "#f0e5be",
         },
       },
       fontFamily: {

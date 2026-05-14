@@ -34,7 +34,7 @@ export function ReviewCard({ review }: { review: Review }) {
       </div>
       <div className="mt-2">
         <p className="text-sm font-semibold text-white">{review.name}</p>
-        <p className="text-[10px] font-semibold uppercase tracking-wider text-emerald-400">
+        <p className="text-[10px] font-semibold uppercase tracking-wider text-accent-400">
           {review.role}
         </p>
       </div>
