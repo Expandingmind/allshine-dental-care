@@ -17,8 +17,8 @@ export const siteConfig = {
     average: 4.9,
   },
   social: {
-    instagram: "https://instagram.com/",
-    facebook: "https://facebook.com/",
+    instagram: "https://www.instagram.com/Allshinedentalcare",
+    facebook: "https://www.facebook.com/share/1Kpx7wAna7/?mibextid=wwXIfr",
   },
 } as const;
 

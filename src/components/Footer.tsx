@@ -21,18 +21,25 @@ export function Footer() {
         <div className="md:col-span-2">
           <Logo size={140} mobileSize={100} />
           <p className="mt-4 max-w-sm text-sm text-brand-200">{t.footer.tagline}</p>
-          <div className="mt-6 flex gap-3">
+          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-brand-300">
+            {t.footer.followUs}
+          </p>
+          <div className="mt-3 flex gap-3">
             <a
               href={siteConfig.social.instagram}
-              aria-label="Instagram"
-              className="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-white/20"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Allshine Dental Care on Instagram"
+              className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition-all duration-300 hover:bg-white/20 hover:-translate-y-0.5"
             >
               <IgIcon className="h-4 w-4" />
             </a>
             <a
               href={siteConfig.social.facebook}
-              aria-label="Facebook"
-              className="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-white/20"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Allshine Dental Care on Facebook"
+              className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition-all duration-300 hover:bg-white/20 hover:-translate-y-0.5"
             >
               <FbIcon className="h-4 w-4" />
             </a>
