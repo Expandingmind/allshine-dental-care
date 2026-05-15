@@ -2,18 +2,11 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
-import { Marquee } from "@/components/Marquee";
-import { ReviewCard } from "@/components/ReviewCard";
-import { GoogleLogo } from "@/components/GoogleLogo";
 import { Reveal } from "@/components/Reveal";
-import { siteConfig } from "@/lib/site-config";
 
 export default function HomePage() {
   const { t } = useLanguage();
   const totalServices = String(t.services.list.length).padStart(2, "0");
-  const reviewHalf = Math.ceil(t.testimonials.list.length / 2);
-  const topReviews = t.testimonials.list.slice(0, reviewHalf);
-  const bottomReviews = t.testimonials.list.slice(reviewHalf);
   return (
     <>
       {/* HERO */}
@@ -147,58 +140,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS TEASER */}
-      <section className="bg-brand-950 py-20 text-white">
-        <div className="section">
-          <Reveal as="fade-up">
-            <div className="mx-auto max-w-2xl text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
-                {t.home.testimonialsEyebrow}
-              </p>
-              <h2 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-                {t.home.testimonialsTitle}
-              </h2>
-              <div className="mt-4 inline-flex flex-wrap items-center justify-center gap-2 text-sm text-brand-100">
-                <span className="inline-flex gap-0.5 text-accent-400">
-                  {[0, 1, 2, 3, 4].map((i) => (
-                    <StarIcon key={i} className="h-4 w-4" />
-                  ))}
-                </span>
-                <span>
-                  <strong className="text-white">
-                    {siteConfig.reviewStats.average.toFixed(1)}
-                  </strong>{" "}
-                  · {siteConfig.reviewStats.count}+ {t.testimonials.statsReviewsLabel}
-                </span>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-
-        <div className="mt-10 space-y-6">
-          <Marquee direction="left" durationSeconds={90}>
-            {topReviews.map((r) => (
-              <ReviewCard key={r.name + r.date} review={r} />
-            ))}
-          </Marquee>
-          <Marquee direction="right" durationSeconds={90}>
-            {bottomReviews.map((r) => (
-              <ReviewCard key={r.name + r.date} review={r} />
-            ))}
-          </Marquee>
-        </div>
-
-        <div className="section mt-10 flex flex-wrap items-center justify-center gap-4">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-xs font-medium text-brand-200 ring-1 ring-white/10">
-            <GoogleLogo className="h-4 w-4" />
-            {t.testimonials.verifiedLabel}
-          </span>
-          <Link href="/testimonials" className="btn-outline-light">
-            {t.home.testimonialsCta}
-          </Link>
-        </div>
-      </section>
-
       {/* FINAL CTA */}
       <section className="bg-cream-100 py-20">
         <div className="section">
@@ -229,10 +170,3 @@ function CheckIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-function StarIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z" />
-    </svg>
-  );
-}
