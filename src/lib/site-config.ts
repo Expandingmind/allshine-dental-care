@@ -24,5 +24,5 @@ export const siteConfig = {
 
 export function formatAddress() {
   const a = siteConfig.address;
-  return `${a.line1}, ${a.city}, ${a.state} ${a.zip}`;
+  return `${a.line1}, ${a.line2}, ${a.city}, ${a.state} ${a.zip}`;
 }
