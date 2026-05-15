@@ -1,11 +1,11 @@
 export const siteConfig = {
   name: "Allshine Dental Care",
   address: {
-    line1: "123 Sample Street",
-    line2: "Suite 100",
-    city: "Miami",
+    line1: "14645 NW 77th Ave",
+    line2: "Suite 106",
+    city: "Miami Lakes",
     state: "FL",
-    zip: "33101",
+    zip: "33014",
   },
   phoneDisplay: "(305) 686-4510",
   phoneHref: "tel:+13056864510",
