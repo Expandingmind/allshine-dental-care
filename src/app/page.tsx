@@ -9,44 +9,54 @@ export default function HomePage() {
   const totalServices = String(t.services.list.length).padStart(2, "0");
   return (
     <>
-      {/* HERO */}
-      <section className="bg-cream-100">
-        <div className="section grid items-center gap-12 py-14 md:grid-cols-2 md:py-24">
-          <div className="opacity-0 animate-fade-up">
-            <p className="eyebrow">{t.home.heroEyebrow}</p>
-            <h1 className="h-script mt-4">{t.home.heroTitle}</h1>
-            <p className="mt-6 max-w-lg text-lg text-slate-600">
-              {t.home.heroSubtitle}
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/contact" className="btn-primary">
-                {t.home.heroCtaPrimary}
-              </Link>
-              <Link href="/services" className="btn-secondary">
-                {t.home.heroCtaSecondary}
-              </Link>
-            </div>
-          </div>
-          <div className="relative opacity-0 animate-fade-up [animation-delay:200ms]">
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-brand-700 shadow-2xl">
-              <div className="flex h-full items-start p-6 sm:p-8">
-                <div className="rounded-2xl bg-cream-100/95 p-5 shadow-lg backdrop-blur">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-brand-700">
-                    {t.home.heroEyebrow}
-                  </p>
-                  <p className="mt-2 text-lg font-semibold text-brand-900">
-                    {t.home.aboutTitle}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white p-4 shadow-xl ring-1 ring-brand-100 sm:block">
-              <p className="text-3xl font-bold text-brand-700">15+</p>
-              <p className="text-xs uppercase tracking-wider text-slate-500">
-                years of trusted care
-              </p>
-            </div>
-          </div>
+      {/* HERO — full-bleed video section with centered overlay */}
+      <section className="relative h-[78vh] min-h-[520px] w-full overflow-hidden bg-brand-950 text-white">
+        {/*
+          Drop a video file at /public/hero-video.mp4 (and optionally
+          /public/hero-poster.jpg) and uncomment the <video> block below.
+          Until then, the dark green bg + cursive title acts as the placeholder.
+        */}
+        {/*
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/hero-poster.jpg"
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        */}
+
+        {/* Subtle vignette so text always reads on top of any future footage */}
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"
+        />
+
+        {/* Centered content */}
+        <div className="relative flex h-full flex-col items-center justify-center px-4 text-center">
+          <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.22em] text-cream-100">
+            {t.home.heroEyebrow}
+          </p>
+          <h1 className="opacity-0 animate-fade-up [animation-delay:150ms] h-script mt-4 !text-cream-50">
+            {t.home.heroTitle}
+          </h1>
+          <p className="opacity-0 animate-fade-up [animation-delay:300ms] mt-6 max-w-xl text-base text-white/85 sm:text-lg">
+            {t.home.heroSubtitle}
+          </p>
+
+          {/* Play button — decorative for now, becomes scrub control when video lands */}
+          <button
+            type="button"
+            aria-label="Watch our story"
+            className="opacity-0 animate-fade-up [animation-delay:450ms] mt-10 grid h-16 w-16 place-items-center rounded-full border-2 border-white/80 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/15"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" className="ml-1 h-6 w-6">
+              <path d="M8 5v14l11-7Z" />
+            </svg>
+          </button>
         </div>
       </section>
 

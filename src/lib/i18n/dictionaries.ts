@@ -14,6 +14,7 @@ export const dictionaries = {
       hoursLabel: "Hours",
       hoursWeekdays: "Mon – Fri: 9 AM – 6 PM",
       hoursWeekend: "Sat: 9 AM – 2 PM",
+      banner: "Now Accepting New Patients · Walk-ins Welcome · We Speak Spanish",
     },
     home: {
       heroEyebrow: "Family & Cosmetic Dentistry",
@@ -314,6 +315,7 @@ export const dictionaries = {
       hoursLabel: "Horario",
       hoursWeekdays: "Lun – Vie: 9 AM – 6 PM",
       hoursWeekend: "Sáb: 9 AM – 2 PM",
+      banner: "Aceptamos Nuevos Pacientes · Sin Cita Bienvenidos · Hablamos Español",
     },
     home: {
       heroEyebrow: "Odontología Familiar y Estética",

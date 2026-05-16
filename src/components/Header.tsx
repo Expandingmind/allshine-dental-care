@@ -52,7 +52,7 @@ export function Header() {
       {/* Main navigation */}
       <div className="border-b border-slate-100">
         <div className="section flex items-center justify-between py-3">
-          <Logo size={104} mobileSize={64} />
+          <Logo size={140} mobileSize={88} />
 
           <nav className="hidden items-center gap-1 lg:flex">
             {navItems.map((item) => (
@@ -105,6 +105,13 @@ export function Header() {
             </nav>
           </div>
         )}
+      </div>
+
+      {/* Announcement banner — green divider, Pembroke-style */}
+      <div className="bg-brand-700 text-white">
+        <div className="section py-2.5 text-center text-[11px] font-semibold uppercase tracking-[0.18em] sm:text-xs">
+          {t.header.banner}
+        </div>
       </div>
     </header>
   );
