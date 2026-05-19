@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
-import { siteConfig, formatAddress } from "@/lib/site-config";
+import { siteConfig, formatAddress, directionsUrl } from "@/lib/site-config";
 import { Logo } from "./Logo";
 import { LanguageToggle } from "./LanguageToggle";
 
@@ -20,8 +20,8 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-cream-100 shadow-sm">
-      {/* Top utility bar — BioHax-style: address, phone, appointment CTA, language */}
-      <div className="bg-brand-950 text-white">
+      {/* Top utility bar — desktop only. Mobile uses the quick-actions row instead. */}
+      <div className="hidden bg-brand-950 text-white md:block">
         <div className="section flex flex-wrap items-center justify-between gap-y-2 py-2 text-xs sm:text-sm">
           <div className="hidden items-center gap-6 md:flex">
             <span className="inline-flex items-center gap-2">
@@ -102,9 +102,45 @@ export function Header() {
               >
                 {siteConfig.phoneDisplay}
               </a>
+              <div className="mt-3 flex items-center justify-center">
+                <div className="rounded-full bg-brand-900 px-1 py-1">
+                  <LanguageToggle />
+                </div>
+              </div>
             </nav>
           </div>
         )}
+      </div>
+
+      {/* Mobile quick-actions row — Direction / Phone / Appointment (Pembroke-style) */}
+      <div className="bg-brand-950 text-white md:hidden">
+        <div className="grid grid-cols-3 divide-x divide-white/10">
+          <a
+            href={directionsUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center gap-1.5 py-3 transition active:bg-white/5"
+          >
+            <PinIcon className="h-5 w-5 text-accent-400" />
+            <span className="text-[13px] font-medium">{t.nav.direction}</span>
+          </a>
+          <a
+            href={siteConfig.phoneHref}
+            className="flex flex-col items-center justify-center gap-1.5 py-3 transition active:bg-white/5"
+          >
+            <PhoneIcon className="h-5 w-5 text-accent-400" />
+            <span className="text-[13px] font-medium">
+              {siteConfig.phoneDisplay}
+            </span>
+          </a>
+          <Link
+            href={siteConfig.bookingUrl}
+            className="flex flex-col items-center justify-center gap-1.5 py-3 transition active:bg-white/5"
+          >
+            <CalendarIcon className="h-5 w-5 text-accent-400" />
+            <span className="text-[13px] font-medium">{t.nav.appointment}</span>
+          </Link>
+        </div>
       </div>
 
       {/* Announcement banner — green divider, Pembroke-style */}

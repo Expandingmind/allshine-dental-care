@@ -7,6 +7,8 @@ export const dictionaries = {
       testimonials: "Testimonials",
       contact: "Contact",
       bookAppointment: "Book Appointment",
+      direction: "Direction",
+      appointment: "Appointment",
     },
     header: {
       addressLabel: "Visit Us",
@@ -308,6 +310,8 @@ export const dictionaries = {
       testimonials: "Testimonios",
       contact: "Contacto",
       bookAppointment: "Reservar Cita",
+      direction: "Cómo Llegar",
+      appointment: "Cita",
     },
     header: {
       addressLabel: "Visítenos",

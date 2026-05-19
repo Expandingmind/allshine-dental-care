@@ -26,3 +26,7 @@ export function formatAddress() {
   const a = siteConfig.address;
   return `${a.line1}, ${a.line2}, ${a.city}, ${a.state} ${a.zip}`;
 }
+
+export function directionsUrl() {
+  return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(formatAddress())}`;
+}
