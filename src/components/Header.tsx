@@ -52,7 +52,7 @@ export function Header() {
       {/* Main navigation */}
       <div className="border-b border-slate-100">
         <div className="section flex items-center justify-between py-3">
-          <Logo size={140} mobileSize={88} />
+          <Logo size={140} mobileSize={180} />
 
           <nav className="hidden items-center gap-1 lg:flex">
             {navItems.map((item) => (
