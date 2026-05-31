@@ -16,12 +16,12 @@ export function Footer() {
   const { t } = useLanguage();
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-brand-950 text-brand-100">
+    <footer className="bg-tan-200 text-brand-800">
       <div className="section grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
           <Logo size={140} mobileSize={100} />
-          <p className="mt-4 max-w-sm text-sm text-brand-200">{t.footer.tagline}</p>
-          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-brand-300">
+          <p className="mt-4 max-w-sm text-sm text-brand-700">{t.footer.tagline}</p>
+          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
             {t.footer.followUs}
           </p>
           <div className="mt-3 flex gap-3">
@@ -30,7 +30,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Allshine Dental Care on Instagram"
-              className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition-all duration-300 hover:bg-white/20 hover:-translate-y-0.5"
+              className="grid h-10 w-10 place-items-center rounded-full bg-brand-900/10 text-brand-800 transition-all duration-300 hover:bg-brand-900/20 hover:-translate-y-0.5"
             >
               <IgIcon className="h-4 w-4" />
             </a>
@@ -39,7 +39,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Allshine Dental Care on Facebook"
-              className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition-all duration-300 hover:bg-white/20 hover:-translate-y-0.5"
+              className="grid h-10 w-10 place-items-center rounded-full bg-brand-900/10 text-brand-800 transition-all duration-300 hover:bg-brand-900/20 hover:-translate-y-0.5"
             >
               <FbIcon className="h-4 w-4" />
             </a>
@@ -47,13 +47,13 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-brand-900">
             {t.footer.quickLinks}
           </h4>
           <ul className="mt-4 space-y-2 text-sm">
             {navItems.map((item) => (
               <li key={item.key}>
-                <Link href={item.href} className="text-brand-200 transition hover:text-white">
+                <Link href={item.href} className="text-brand-700 transition hover:text-brand-900">
                   {t.nav[item.key]}
                 </Link>
               </li>
@@ -62,18 +62,18 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-brand-900">
             {t.footer.contact}
           </h4>
-          <ul className="mt-4 space-y-2 text-sm text-brand-200">
+          <ul className="mt-4 space-y-2 text-sm text-brand-700">
             <li>{formatAddress()}</li>
             <li>
-              <a href={siteConfig.phoneHref} className="hover:text-white">
+              <a href={siteConfig.phoneHref} className="hover:text-brand-900">
                 {siteConfig.phoneDisplay}
               </a>
             </li>
             <li>
-              <a href={`mailto:${siteConfig.email}`} className="hover:text-white">
+              <a href={`mailto:${siteConfig.email}`} className="hover:text-brand-900">
                 {siteConfig.email}
               </a>
             </li>
@@ -81,8 +81,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="section flex flex-wrap items-center justify-between gap-2 py-5 text-xs text-brand-300">
+      <div className="border-t border-brand-900/10">
+        <div className="section flex flex-wrap items-center justify-between gap-2 py-5 text-xs text-brand-700">
           <span>
             &copy; {year} {siteConfig.name}. {t.footer.rights}
           </span>

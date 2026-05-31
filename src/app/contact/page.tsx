@@ -11,15 +11,15 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-brand-950 py-20 text-white">
+      <section className="bg-tan-200 py-20 text-brand-900">
         <div className="section text-center">
-          <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
+          <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-accent-600">
             {t.contact.eyebrow}
           </p>
-          <h1 className="opacity-0 animate-fade-up [animation-delay:150ms] mt-3 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+          <h1 className="opacity-0 animate-fade-up [animation-delay:150ms] mt-3 font-display text-4xl font-bold leading-tight tracking-tight text-brand-900 sm:text-5xl">
             {t.contact.title}
           </h1>
-          <p className="opacity-0 animate-fade-up [animation-delay:300ms] mx-auto mt-4 max-w-2xl text-brand-100">
+          <p className="opacity-0 animate-fade-up [animation-delay:300ms] mx-auto mt-4 max-w-2xl text-brand-800">
             {t.contact.intro}
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
           </Reveal>
 
           {/* Info */}
-          <Reveal as="fade-left" delay={150} tag="aside" className="rounded-3xl bg-brand-950 p-8 text-white shadow-2xl lg:col-span-2">
+          <Reveal as="fade-left" delay={150} tag="aside" className="rounded-3xl bg-brand-700 p-8 text-white shadow-2xl lg:col-span-2">
             <h2 className="font-display text-2xl font-bold text-white">
               {t.contact.infoTitle}
             </h2>
@@ -83,14 +83,14 @@ export default function ContactPage() {
                 </a>
               </InfoRow>
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-wider text-brand-300">
+                <dt className="text-xs font-semibold uppercase tracking-wider text-brand-200">
                   {t.contact.hoursLabel}
                 </dt>
-                <dd className="mt-2 space-y-1 text-brand-100">
+                <dd className="mt-2 space-y-1 text-cream-100">
                   {t.contact.hoursList.map((h) => (
                     <div key={h.day} className="flex justify-between gap-4">
                       <span>{h.day}</span>
-                      <span className="text-brand-300">{h.hours}</span>
+                      <span className="text-brand-200">{h.hours}</span>
                     </div>
                   ))}
                 </dd>
@@ -142,10 +142,10 @@ function InfoRow({
 }) {
   return (
     <div>
-      <dt className="text-xs font-semibold uppercase tracking-wider text-brand-300">
+      <dt className="text-xs font-semibold uppercase tracking-wider text-brand-200">
         {label}
       </dt>
-      <dd className="mt-1 text-brand-100">{children}</dd>
+      <dd className="mt-1 text-cream-100">{children}</dd>
     </div>
   );
 }

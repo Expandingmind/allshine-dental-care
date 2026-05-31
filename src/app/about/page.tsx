@@ -34,21 +34,21 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-brand-950 py-20 text-white">
+      <section className="bg-tan-200 py-20 text-brand-900">
         <div className="section">
           <Reveal as="fade-up">
-            <h2 className="text-center font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+            <h2 className="text-center font-display text-4xl font-bold leading-tight tracking-tight text-brand-900 sm:text-5xl">
               {t.about.valuesTitle}
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {t.about.values.map((v, i) => (
               <Reveal key={v.title} as="fade-up" delay={i * 100}>
-                <div className="group h-full rounded-2xl bg-white/[0.04] p-6 ring-1 ring-white/10 transition-all duration-500 hover:bg-white/[0.08] hover:-translate-y-1">
-                  <h3 className="text-lg font-semibold text-accent-400 transition-colors group-hover:text-accent-300">
+                <div className="group h-full rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-100 transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                  <h3 className="text-lg font-semibold text-brand-700 transition-colors group-hover:text-brand-900">
                     {v.title}
                   </h3>
-                  <p className="mt-2 text-sm text-brand-100">{v.body}</p>
+                  <p className="mt-2 text-sm text-slate-600">{v.body}</p>
                 </div>
               </Reveal>
             ))}
@@ -81,12 +81,12 @@ export default function AboutPage() {
 
 function PageHero({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
-    <section className="bg-brand-950 py-20 text-white">
+    <section className="bg-tan-200 py-20 text-brand-900">
       <div className="section text-center">
-        <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
+        <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-accent-600">
           {eyebrow}
         </p>
-        <h1 className="opacity-0 animate-fade-up [animation-delay:150ms] mt-3 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+        <h1 className="opacity-0 animate-fade-up [animation-delay:150ms] mt-3 font-display text-4xl font-bold leading-tight tracking-tight text-brand-900 sm:text-5xl">
           {title}
         </h1>
       </div>

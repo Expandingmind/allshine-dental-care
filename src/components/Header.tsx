@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-cream-100 shadow-sm">
       {/* Top utility bar — desktop only. Mobile uses the quick-actions row instead. */}
-      <div className="hidden bg-brand-950 text-white md:block">
+      <div className="hidden bg-brand-800 text-white md:block">
         <div className="section flex flex-wrap items-center justify-between gap-y-2 py-2 text-xs sm:text-sm">
           <div className="hidden items-center gap-6 md:flex">
             <span className="inline-flex items-center gap-2">
@@ -113,7 +113,7 @@ export function Header() {
       </div>
 
       {/* Mobile quick-actions row — Direction / Phone / Appointment (Pembroke-style) */}
-      <div className="bg-brand-950 text-white md:hidden">
+      <div className="bg-brand-800 text-white md:hidden">
         <div className="grid grid-cols-3 divide-x divide-white/10">
           <a
             href={directionsUrl()}
@@ -143,7 +143,7 @@ export function Header() {
         </div>
       </div>
 
-      {/* Announcement banner — green divider, Pembroke-style */}
+      {/* Announcement banner — brown divider, Pembroke-style */}
       <div className="bg-brand-700 text-white">
         <div className="section py-2.5 text-center text-[11px] font-semibold uppercase tracking-[0.18em] sm:text-xs">
           {t.header.banner}

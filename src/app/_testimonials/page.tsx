@@ -19,26 +19,26 @@ export default function TestimonialsPage() {
   return (
     <>
       {/* HERO with stats + Leave a Review CTA */}
-      <section className="bg-brand-950 py-20 text-white">
+      <section className="bg-tan-200 py-20 text-brand-900">
         <div className="section flex flex-wrap items-end justify-between gap-6">
           <div className="opacity-0 animate-fade-up">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-600">
               {t.testimonials.eyebrow}
             </p>
-            <h1 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+            <h1 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight text-brand-900 sm:text-5xl">
               {t.testimonials.title}
             </h1>
-            <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-brand-100">
+            <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-brand-800">
               <span>
-                <strong className="text-white">{stats.count}+ </strong>
+                <strong className="text-brand-900">{stats.count}+ </strong>
                 {t.testimonials.statsReviewsLabel}
               </span>
-              <span className="text-brand-300">·</span>
+              <span className="text-brand-500">·</span>
               <span>{t.testimonials.statsWithLabel}</span>
-              <strong className="text-white">
+              <strong className="text-brand-900">
                 {stats.average.toLocaleString(locale, { minimumFractionDigits: 1 })}
               </strong>
-              <span className="inline-flex items-center gap-0.5 text-accent-400">
+              <span className="inline-flex items-center gap-0.5 text-accent-600">
                 {[0, 1, 2, 3, 4].map((i) => (
                   <StarIcon key={i} className="h-4 w-4" />
                 ))}
@@ -51,7 +51,7 @@ export default function TestimonialsPage() {
             href={siteConfig.googleReviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline-light opacity-0 animate-fade-up [animation-delay:200ms]"
+            className="btn-secondary opacity-0 animate-fade-up [animation-delay:200ms]"
           >
             <ChatIcon className="mr-2 h-4 w-4" />
             {t.testimonials.leaveReviewCta}
@@ -60,7 +60,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* MARQUEE rows */}
-      <section className="bg-brand-950 pb-20 text-white">
+      <section className="bg-tan-200 pb-20 text-brand-900">
         <div className="space-y-6">
           <Marquee direction="left" durationSeconds={90}>
             {topRow.map((r) => (
@@ -75,7 +75,7 @@ export default function TestimonialsPage() {
         </div>
 
         <div className="section mt-10 flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-xs font-medium text-brand-200 ring-1 ring-white/10">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-medium text-brand-700 ring-1 ring-brand-200">
             <GoogleLogo className="h-4 w-4" />
             {t.testimonials.verifiedLabel}
           </span>

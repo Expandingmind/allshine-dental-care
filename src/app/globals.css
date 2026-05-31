@@ -30,7 +30,7 @@ body {
 }
 
 @layer components {
-  /* Primary — filled green pill with a thin offset ring (Reserve "Inquire Here" look) */
+  /* Primary — filled brown pill with a thin offset ring */
   .btn-primary {
     @apply relative inline-flex items-center justify-center rounded-full bg-brand-700 px-8 py-3.5 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:bg-brand-800 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none;
     outline: 1px solid theme("colors.brand.700");
@@ -39,7 +39,7 @@ body {
   .btn-primary:hover {
     outline-color: theme("colors.brand.800");
   }
-  /* Outline — transparent pill, subtle hover wash (Reserve "Become a Member" look) */
+  /* Outline — transparent pill, subtle hover wash */
   .btn-secondary {
     @apply inline-flex items-center justify-center rounded-full border border-brand-800 px-8 py-3.5 text-sm font-medium tracking-wide text-brand-900 transition-all duration-300 hover:bg-brand-900/5 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none;
   }

@@ -5,32 +5,38 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Deep forest green — tuned to match Reserve Padel's "Inquire Here" green
+        // Warm brown — matches the business-card palette (logo brown / cocoa)
         brand: {
-          50: "#edf5ee",
-          100: "#cee5d3",
-          200: "#9fcdab",
-          300: "#6cae7d",
-          400: "#3f8e58",
-          500: "#23733e",
-          600: "#1c6235",
-          700: "#185a31",
-          800: "#114229",
-          900: "#0a2d1d",
-          950: "#04190e",
+          50: "#f7f1e6",
+          100: "#ece0c9",
+          200: "#dcc8a3",
+          300: "#c9ad7f",
+          400: "#b08f57",
+          500: "#8f6b3c",
+          600: "#7d5a36",
+          700: "#6e4a2a",
+          800: "#5a3d22",
+          900: "#4a3119",
+          950: "#3d2815",
         },
-        // Lighter green for CTA pops on dark sections
+        // Gold — warm metallic accent for CTA pops and highlights
         accent: {
-          300: "#bfe7cf",
-          400: "#8dd1a8",
-          500: "#56b87f",
-          600: "#2e9d5a",
+          300: "#e3d0a0",
+          400: "#dcc58a",
+          500: "#c2a052",
+          600: "#a8863c",
         },
         // Cream — exact match for the logo's card background (#faf3e6)
         cream: {
-          50: "#fdfaf3",
+          50: "#fdfbf6",
           100: "#faf3e6",
-          200: "#f0e3c2",
+          200: "#f0e4cc",
+        },
+        // Tan — warm sand tones for full-width section backgrounds
+        tan: {
+          100: "#f0e4cc",
+          200: "#e7d8bb",
+          300: "#dcc8a3",
         },
       },
       fontFamily: {

@@ -10,11 +10,11 @@ export default function HomePage() {
   return (
     <>
       {/* HERO — full-bleed video section with centered overlay */}
-      <section className="relative h-[78vh] min-h-[520px] w-full overflow-hidden bg-brand-950 text-white">
+      <section className="relative h-[78vh] min-h-[520px] w-full overflow-hidden bg-gradient-to-b from-cream-50 via-cream-100 to-tan-200 text-brand-900">
         {/*
           Drop a video file at /public/hero-video.mp4 (and optionally
           /public/hero-poster.jpg) and uncomment the <video> block below.
-          Until then, the dark green bg + cursive title acts as the placeholder.
+          Until then, the warm cream/tan gradient + cursive title acts as the placeholder.
         */}
         {/*
         <video
@@ -29,21 +29,21 @@ export default function HomePage() {
         </video>
         */}
 
-        {/* Subtle vignette so text always reads on top of any future footage */}
+        {/* Subtle warm vignette — soft tan edges that frame the centered content */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"
+          className="absolute inset-0 bg-[radial-gradient(120%_120%_at_50%_35%,rgba(253,251,246,0.6)_0%,transparent_55%)]"
         />
 
         {/* Centered content */}
         <div className="relative flex h-full flex-col items-center justify-center px-4 text-center">
-          <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.22em] text-cream-100">
+          <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.22em] text-brand-700">
             {t.home.heroEyebrow}
           </p>
-          <h1 className="opacity-0 animate-fade-up [animation-delay:150ms] h-script mt-4 !text-cream-50">
+          <h1 className="opacity-0 animate-fade-up [animation-delay:150ms] h-script mt-4 !text-brand-900">
             {t.home.heroTitle}
           </h1>
-          <p className="opacity-0 animate-fade-up [animation-delay:300ms] mt-6 max-w-xl text-base text-white/85 sm:text-lg">
+          <p className="opacity-0 animate-fade-up [animation-delay:300ms] mt-6 max-w-xl text-base text-brand-800/80 sm:text-lg">
             {t.home.heroSubtitle}
           </p>
 
@@ -51,7 +51,7 @@ export default function HomePage() {
           <button
             type="button"
             aria-label="Watch our story"
-            className="opacity-0 animate-fade-up [animation-delay:450ms] mt-10 grid h-16 w-16 place-items-center rounded-full border-2 border-white/80 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/15"
+            className="opacity-0 animate-fade-up [animation-delay:450ms] mt-10 grid h-16 w-16 place-items-center rounded-full border-2 border-brand-700/60 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-brand-700/10"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="ml-1 h-6 w-6">
               <path d="M8 5v14l11-7Z" />
@@ -87,21 +87,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ABOUT TEASER — dark drama break */}
-      <section className="bg-brand-950 py-20 text-white">
+      {/* ABOUT TEASER — warm tan drama break */}
+      <section className="bg-tan-200 py-20 text-brand-900">
         <div className="section grid items-center gap-12 md:grid-cols-2">
           <Reveal as="fade-right">
             <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-brand-700 shadow-2xl" />
           </Reveal>
           <Reveal as="fade-left" delay={150}>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-600">
               {t.home.aboutEyebrow}
             </p>
-            <h2 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight text-brand-900 sm:text-5xl">
               {t.home.aboutTitle}
             </h2>
-            <p className="mt-4 text-brand-100">{t.home.aboutBody}</p>
-            <Link href="/about" className="btn-cream mt-6">
+            <p className="mt-4 text-brand-800">{t.home.aboutBody}</p>
+            <Link href="/about" className="btn-primary mt-6">
               {t.home.aboutCta}
             </Link>
           </Reveal>
@@ -154,11 +154,11 @@ export default function HomePage() {
       <section className="bg-cream-100 py-20">
         <div className="section">
           <Reveal as="fade-up">
-            <div className="rounded-3xl bg-brand-950 px-8 py-12 text-center text-white shadow-2xl sm:px-16 sm:py-16">
+            <div className="rounded-3xl bg-brand-700 px-8 py-12 text-center text-white shadow-2xl sm:px-16 sm:py-16">
               <h2 className="font-display text-3xl font-bold sm:text-4xl">
                 {t.home.ctaTitle}
               </h2>
-              <p className="mx-auto mt-3 max-w-xl text-brand-100">
+              <p className="mx-auto mt-3 max-w-xl text-cream-100">
                 {t.home.ctaBody}
               </p>
               <Link href="/contact" className="btn-cream mt-8">

@@ -10,15 +10,15 @@ export default function ServicesPage() {
 
   return (
     <>
-      <section className="bg-brand-950 py-20 text-white">
+      <section className="bg-tan-200 py-20 text-brand-900">
         <div className="section text-center">
-          <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-accent-400">
+          <p className="opacity-0 animate-fade-up text-xs font-semibold uppercase tracking-[0.18em] text-accent-600">
             {t.services.eyebrow}
           </p>
-          <h1 className="opacity-0 animate-fade-up [animation-delay:150ms] mt-3 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+          <h1 className="opacity-0 animate-fade-up [animation-delay:150ms] mt-3 font-display text-4xl font-bold leading-tight tracking-tight text-brand-900 sm:text-5xl">
             {t.services.title}
           </h1>
-          <p className="opacity-0 animate-fade-up [animation-delay:300ms] mx-auto mt-4 max-w-2xl text-brand-100">
+          <p className="opacity-0 animate-fade-up [animation-delay:300ms] mx-auto mt-4 max-w-2xl text-brand-800">
             {t.services.intro}
           </p>
         </div>
@@ -57,11 +57,11 @@ export default function ServicesPage() {
       <section className="bg-cream-100 py-20">
         <div className="section">
           <Reveal as="fade-up">
-            <div className="rounded-3xl bg-brand-950 px-8 py-12 text-center text-white shadow-2xl sm:px-16 sm:py-16">
+            <div className="rounded-3xl bg-brand-700 px-8 py-12 text-center text-white shadow-2xl sm:px-16 sm:py-16">
               <h2 className="font-display text-3xl font-bold sm:text-4xl">
                 Not sure what you need?
               </h2>
-              <p className="mx-auto mt-3 max-w-xl text-brand-100">
+              <p className="mx-auto mt-3 max-w-xl text-cream-100">
                 Book a consultation and we&apos;ll help you find the right plan for your smile.
               </p>
               <Link href="/contact" className="btn-cream mt-8">
