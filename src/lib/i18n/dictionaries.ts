@@ -56,6 +56,12 @@ export const dictionaries = {
       testimonialsEyebrow: "What Our Patients Say",
       testimonialsTitle: "Real stories from real smiles.",
       testimonialsCta: "Read more testimonials",
+      storiesIntro:
+        "Hear from our patients in their own words, and see the difference a confident smile makes.",
+      storiesVideoLabel: "Patient testimonial video",
+      beforeAfterTitle: "Smile transformation",
+      beforeLabel: "Before",
+      afterLabel: "After",
       ctaTitle: "Ready for your brightest smile?",
       ctaBody:
         "New patients are welcome. Schedule your first visit in under a minute.",
@@ -358,6 +364,12 @@ export const dictionaries = {
       servicesCta: "Ver todos los servicios",
       testimonialsEyebrow: "Lo Que Dicen Nuestros Pacientes",
       testimonialsTitle: "Historias reales de sonrisas reales.",
+      storiesIntro:
+        "Escuche a nuestros pacientes en sus propias palabras y vea la diferencia que hace una sonrisa segura.",
+      storiesVideoLabel: "Video testimonial de paciente",
+      beforeAfterTitle: "Transformación de sonrisa",
+      beforeLabel: "Antes",
+      afterLabel: "Después",
       testimonialsCta: "Leer más testimonios",
       ctaTitle: "¿Listo para su sonrisa más brillante?",
       ctaBody:
