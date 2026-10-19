@@ -60,6 +60,68 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* PATIENT STORIES — video testimonial + before/after */}
+      <section className="bg-tan-200 py-20 text-brand-900">
+        <div className="section">
+          <Reveal as="fade-up">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-600">
+                {t.home.testimonialsEyebrow}
+              </p>
+              <h2 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight text-brand-900 sm:text-5xl">
+                {t.home.testimonialsTitle}
+              </h2>
+              <p className="mt-4 text-brand-800">{t.home.storiesIntro}</p>
+            </div>
+          </Reveal>
+
+          <div className="mt-12 grid items-center gap-10 lg:grid-cols-5">
+            <Reveal as="fade-right" className="lg:col-span-2">
+              <div className="mx-auto max-w-sm overflow-hidden rounded-3xl bg-brand-900 shadow-2xl">
+                <video
+                  controls
+                  playsInline
+                  preload="none"
+                  poster="/patients/patient-story-poster.jpg"
+                  aria-label={t.home.storiesVideoLabel}
+                  className="aspect-[9/16] h-full w-full object-cover"
+                >
+                  <source src="/patients/patient-story.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </Reveal>
+
+            <Reveal as="fade-left" delay={150} className="lg:col-span-3">
+              <h3 className="text-center font-display text-2xl font-bold text-brand-900 lg:text-left">
+                {t.home.beforeAfterTitle}
+              </h3>
+              <div className="mt-6 grid grid-cols-2 gap-4">
+                {[
+                  { src: "/patients/before.jpg", label: t.home.beforeLabel },
+                  { src: "/patients/after.jpg", label: t.home.afterLabel },
+                ].map((img) => (
+                  <figure
+                    key={img.src}
+                    className="relative overflow-hidden rounded-2xl bg-white shadow-lg"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={img.src}
+                      alt={`${t.home.beforeAfterTitle}: ${img.label}`}
+                      loading="lazy"
+                      className="aspect-[3/4] w-full object-cover"
+                    />
+                    <figcaption className="absolute left-3 top-3 rounded-full bg-brand-900/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-white">
+                      {img.label}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* FEATURES */}
       <section className="bg-cream-100 py-20">
         <div className="section">
@@ -146,68 +208,6 @@ export default function HomePage() {
                 </Reveal>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* PATIENT STORIES — video testimonial + before/after */}
-      <section className="bg-tan-200 py-20 text-brand-900">
-        <div className="section">
-          <Reveal as="fade-up">
-            <div className="mx-auto max-w-2xl text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-600">
-                {t.home.testimonialsEyebrow}
-              </p>
-              <h2 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight text-brand-900 sm:text-5xl">
-                {t.home.testimonialsTitle}
-              </h2>
-              <p className="mt-4 text-brand-800">{t.home.storiesIntro}</p>
-            </div>
-          </Reveal>
-
-          <div className="mt-12 grid items-center gap-10 lg:grid-cols-5">
-            <Reveal as="fade-right" className="lg:col-span-2">
-              <div className="mx-auto max-w-sm overflow-hidden rounded-3xl bg-brand-900 shadow-2xl">
-                <video
-                  controls
-                  playsInline
-                  preload="none"
-                  poster="/patients/patient-story-poster.jpg"
-                  aria-label={t.home.storiesVideoLabel}
-                  className="aspect-[9/16] h-full w-full object-cover"
-                >
-                  <source src="/patients/patient-story.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </Reveal>
-
-            <Reveal as="fade-left" delay={150} className="lg:col-span-3">
-              <h3 className="text-center font-display text-2xl font-bold text-brand-900 lg:text-left">
-                {t.home.beforeAfterTitle}
-              </h3>
-              <div className="mt-6 grid grid-cols-2 gap-4">
-                {[
-                  { src: "/patients/before.jpg", label: t.home.beforeLabel },
-                  { src: "/patients/after.jpg", label: t.home.afterLabel },
-                ].map((img) => (
-                  <figure
-                    key={img.src}
-                    className="relative overflow-hidden rounded-2xl bg-white shadow-lg"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={img.src}
-                      alt={`${t.home.beforeAfterTitle}: ${img.label}`}
-                      loading="lazy"
-                      className="aspect-[3/4] w-full object-cover"
-                    />
-                    <figcaption className="absolute left-3 top-3 rounded-full bg-brand-900/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-white">
-                      {img.label}
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-            </Reveal>
           </div>
         </div>
       </section>
