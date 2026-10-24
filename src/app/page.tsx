@@ -153,7 +153,15 @@ export default function HomePage() {
       <section className="bg-tan-200 py-20 text-brand-900">
         <div className="section grid items-center gap-12 md:grid-cols-2">
           <Reveal as="fade-right">
-            <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-brand-700 shadow-2xl" />
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-brand-700 shadow-2xl">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/patients/about-practice.jpg"
+                alt={t.home.aboutTitle}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </Reveal>
           <Reveal as="fade-left" delay={150}>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-600">
